@@ -8,11 +8,14 @@ import * as UAParser from "ua-parser-js";
 import { getTechnologyNews, getYoutubeVideos } from "../../serviceList/newsService";
 import { Swiper, SwiperSlide } from "swiper/react";
 import YouTube from "react-youtube";
+import Slider from "react-slick";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
 import "swiper/css";
 
 export default function About() {
   const [technologyNews, setTechnologyNews] = useState<any[]>([]);
-  const [mediaHeight, setMediaHeight] = useState<number>(600);
   const [loaderObj, setLoaderObj] = useState({loading: false});
    const returnWithVideo = async (data:any): Promise<void> => {
       const promises = data
@@ -33,20 +36,6 @@ export default function About() {
     getTechnologyNews().then((data: any) =>{ returnWithVideo(data);})
   }, []);
 
-  useEffect(() => {
-    const calcHeight = () => {
-      if (typeof window === 'undefined') return;
-      const w = window.innerWidth;
-      if (w < 576) setMediaHeight(220);
-      else if (w < 768) setMediaHeight(300);
-      else if (w < 992) setMediaHeight(360);
-      else if (w < 1200) setMediaHeight(460);
-      else setMediaHeight(600);
-    };
-    calcHeight();
-    window.addEventListener('resize', calcHeight);
-    return () => window.removeEventListener('resize', calcHeight);
-  }, []);
   async  function handleChange(e: any) {
     const parser:any = new UAParser.UAParser();
       if (typeof window !== 'undefined'){
@@ -112,39 +101,38 @@ export default function About() {
         src="/Jainsy-Anjirwala-cv.jpg" className="ht-vh-80 border-all-px-2 cursor-style-none" 
         onDragStart={(e) => e.preventDefault()} onContextMenu={(e) => e.preventDefault()}  style={{ userSelect: "none" }} />
       </div>
-      <div className="col-md-6 col-xs-12 col-sm-12 col-lg-6 col-xxl-6 col-xl-6 border-all-px-2 border-radius-px-10 border-color-grey">
+      <div className="col-md-6 col-xs-12 col-sm-12 col-lg-6 col-xxl-6 col-xl-6 ht-pc-40 border-all-px-2 border-radius-px-10 border-color-grey">
               {
                 technologyNews.length > 0 ? (
-                  <div id="carouselExample" className="carousel slide">
-                        <div className="carousel-inner">
-                          {technologyNews.map((item: any, index: number) => ( 
-                            <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`} > 
-                              {item?.youTubeVideo ? (
-                                  <YouTube
-                                    videoId={item.youTubeVideo}
-                                    opts={{ height: String(mediaHeight), width: '100%', playerVars: { autoplay: 0 } }}
-                                    className="d-block w-100"
-                                  />
+                  <Swiper slidesPerView={1} spaceBetween={10} pagination={{ clickable: true }} modules={[Pagination]}>
+                      {technologyNews.map((article, index) => (
+                         <SwiperSlide key={index}>
+                          {article.youTubeVideo ? (
+                                <YouTube
+                                  videoId={article.youTubeVideo}
+                                  opts={{
+                                    height: String((window.innerHeight / 2)),
+                                    width: String((window.innerWidth)),
+                                    playerVars: { autoplay: 0 },
+                                  }}
+                                />
                               ) : (
                                 <img
-                                  src={item?.urlToImage ? item.urlToImage : item?.image ? item.image : '/default-news-image.jpg'}
-                                  className="d-block w-100"
-                                  alt="no image"
-                                  style={{ width: '100%', height: `${mediaHeight}px`, objectFit: 'cover' }}
+                                  src={article.urlToImage || article.image || "/placeholder.png"}
+                                  alt={article.title || "no image"}
+                                  style={{
+                                    width: `${(window.innerWidth)}px`,
+                                    height: `${(window.innerHeight / 2)}px`,
+                                    objectFit: "cover",
+                                  }}
                                 />
                               )}
-                              <h5>{item.title}</h5> 
-                            </div>))
-                          }</div>
-                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                      <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span className="visually-hidden">Previous</span>
-                    </button>
-                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                      <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span className="visually-hidden">Next</span>
-                    </button>
-                  </div>
+                              <h3 style={{ marginTop: "10px" }}>{article.title}</h3>
+                              <p>{article.description}</p>
+                              <a href={article.url} target="_blank" rel="noopener noreferrer">Read more</a>
+                         </SwiperSlide>
+                      ))}
+                  </Swiper>
                   ):(
                     loaderObj && loaderObj?.loading ? (
                       <div className="col-md-12 col-xs-12 col-sm-12 col-lg-12 col-xxl-12 col-xl-12">

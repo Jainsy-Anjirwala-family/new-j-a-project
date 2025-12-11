@@ -47,3 +47,7 @@
   left: 60%;
 
 }
+
+.overflow-scroll-element {
+  overflow: scroll !important;
+}
