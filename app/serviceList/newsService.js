@@ -63,3 +63,13 @@ export async function getYoutubeVideos(payload) {
     return [];
   }
 }
+
+export async function fetchNodejsIp() {
+  try {
+    const res = await   fetch("https://api.ipify.org?format=json")
+    return res.json();
+  } catch (error) {
+    console.error("Error in handler:", error);
+    return { error: "Internal Server Error" };
+  }
+}

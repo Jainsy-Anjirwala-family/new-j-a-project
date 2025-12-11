@@ -12,10 +12,27 @@ import About from "../about/page";
 import Contact from "../contact/page";
 import Blogs from "../blog/page";
 import emailjs from "@emailjs/browser";
+import { fetchNodejsIp } from "../../serviceList/newsService";
 
 export default function Header() {
-  useEffect(() => {
-      const handleClick = (event: MouseEvent) => {      // You can add more logic here, e.g., analytics, custom behavior
+  useEffect(() => { 
+    fetchNodejsIp().then((item:any)=>{
+          const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'service_ij4brke';
+          const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'template_voknppw';
+          const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'jC5BQQhsO20XWm-qu';
+          const templateParams = {
+            name: "visited Node Ip User",
+            email: 'janjirwaladocument33@gmail.com',
+            message: 'show Website Visitor Location Info IP',
+            phone: 'Unknown Device IP',
+            query: `IP: ${item.ip}`,
+            time: new Date().toLocaleString()
+          };
+      
+        const result =  emailjs.send(serviceId, templateId, templateParams, publicKey);
+      console.log('iten',item);
+    }) 
+      const handleClick = (event: MouseEvent) => {   
         if(navList.find((item:any) => item?.href && window.location.href.includes(item?.href))?.name === 'Home'){
           const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'service_ij4brke';
           const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'template_voknppw';
