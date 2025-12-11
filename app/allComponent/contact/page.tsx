@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
 
 export default function Contact() {
+  const [disableBtn, setDisableBtn] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -46,6 +47,7 @@ export default function Contact() {
   
 async function handleSubmit(e:any) {
   e.preventDefault();
+  setDisableBtn(true);
   if (validationContactUs(formData)){
     toast.loading("Sending...");
         const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'service_ij4brke';
@@ -77,14 +79,16 @@ async function handleSubmit(e:any) {
       const result = await emailjs.send(serviceId, templateId, templateParams, publicKey);
       toast.dismiss();
       toast.success("Message sent!");
-      console.log('EmailJS success:', result);
       setFormData({...formData, name: "", email: "", message: "", phone: "", query: ""});
+      setDisableBtn(false);
     } catch (err) {
       toast.dismiss();
       toast.error("Something went wrong!");
       console.error('EmailJS error:', err);
+      setDisableBtn(false);
     } finally {
       setSending(false);
+      setDisableBtn(false);
     }
   }
 }
@@ -99,26 +103,26 @@ const [sending, setSending] = useState(false);
             <div className="row marg-per-t-2">
               <div className="col-md-6 col-sm-6 col-xs-12 col-lg-6 col-xl-6 col-xxl-6">
                 <label>Name:</label>
-                <input  type="text" name="name" value={formData.name} onChange={handleChange} required className="form-control"/>
+                <input  type="text" name="name" value={formData.name} onChange={handleChange} disabled={disableBtn} required className="form-control"/>
               </div>
               <div className="col-md-6 col-sm-6 col-xs-12 col-lg-6 col-xl-6 col-xxl-6">
                 <label>Email:</label>
-                <input  type="email" name="email" value={formData.email} onChange={handleChange} required className="form-control"/>
+                <input  type="email" name="email" value={formData.email} onChange={handleChange} disabled={disableBtn} required className="form-control"/>
               </div>
             </div>
             <div className="row marg-per-t-2">
               <div className="col-md-6 col-sm-6 col-xs-12 col-lg-6 col-xl-6 col-xxl-6">
                 <label>Mobile Number:</label>
-                <input  type="number" name="phone" value={formData.phone} onChange={handleChange} className="form-control"/>
+                <input  type="number" name="phone" value={formData.phone} onChange={handleChange} disabled={disableBtn} className="form-control"/>
               </div>
               <div className="col-md-6 col-sm-6 col-xs-12 col-lg-6 col-xl-6 col-xxl-6">
                 <label>Subject:</label>
-                <input  type="text" name="query" value={formData.query} onChange={handleChange} required className="form-control"/>
+                <input  type="text" name="query" value={formData.query} onChange={handleChange} disabled={disableBtn} required className="form-control"/>
               </div>
             </div>
             <div className="col-md-12  col-sm-12  col-xs-12 col-lg-12  col-xl-12  col-xxl-12 marg-per-t-2">
               <label>Message:</label>
-              <textarea  name="message" value={formData.message} onChange={handleChange} required className="form-control"/>
+              <textarea  name="message" value={formData.message} onChange={handleChange} disabled={disableBtn} required className="form-control"/>
             </div>
             <button type="submit" className="btn btn-primary marg-per-t-3">
               Send Message

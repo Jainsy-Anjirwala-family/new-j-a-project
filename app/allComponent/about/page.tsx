@@ -23,16 +23,8 @@ export default function About() {
           item?.id?.videoId ? item['url'] = `https://www.youtube.com/watch?v=${item?.id?.videoId}` : null;
            return item;})
          setTechnologyNews(youtubeList);
-          console.log('fetchYoutubeVideos',item);
         })
   }
-  const googleVideos = [
-    { youTubeIds: "l3XV3HJZTxo", url: 'https://www.youtube.com/watch?v=l3XV3HJZTxo&utm_source=chatgpt.com', title: "Google I/O 2024 Keynote" },
-    { youTubeIds: "U10l4WjJxlE", url: 'https://www.youtube.com/watch?v=U10l4WjJxlE', title: "Google Gemini Full Demo" },
-    { youTubeIds: "cNQxb8wzpas", url: 'https://www.youtube.com/watch?v=cNQxb8wzpas', title: "Google AI New Features" },
-    { youTubeIds: "ibxSgbT-duI", url: 'https://www.youtube.com/watch?v=ibxSgbT-duI', title: "Google Maps AI Updates" },
-    { youTubeIds: "qWN5kTwvZWE", url: 'https://www.youtube.com/watch?v=qWN5kTwvZWE', title: "Google Search AI Updates" },
-  ];
   const [technologyNews, setTechnologyNews] = useState<any[]>([]);
   const [loaderObj, setLoaderObj] = useState({loading: false});
    const returnWithVideo = async (data:any): Promise<void> => {

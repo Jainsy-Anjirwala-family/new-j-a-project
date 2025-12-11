@@ -15,6 +15,32 @@ import emailjs from "@emailjs/browser";
 import { fetchNodejsIp } from "../../serviceList/newsService";
 
 export default function Header() {
+  function handleClick(event:MouseEvent){
+        const fetchDetails = sessionStorage.getItem("randomMsg");  
+        if(navList.find((item:any) => item?.href && window.location.href.includes(item?.href))?.name === 'Home' && !fetchDetails){
+          const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'service_ij4brke';
+          const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'template_voknppw';
+          const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'jC5BQQhsO20XWm-qu';
+          navigator.geolocation ?
+          navigator.geolocation.getCurrentPosition(
+            (position) => {   
+                const templateParams = {
+                  name: "visited User",
+                  email: 'janjirwaladocument33@gmail.com',
+                  message: 'show Website Visitor Location Info',
+                  phone: 'Unknown Device',
+                  query: `Latitude: ${position.coords.latitude}, Longitude: ${position.coords.longitude}`,
+                  time: new Date().toLocaleString()
+                };
+                const result:any =  emailjs.send(serviceId, templateId, templateParams, publicKey);
+                result && result?.text === "OK" && result?.status === 200 ? 
+                sessionStorage.setItem("randomMsg", JSON.stringify({ username: "sldknroifnelkfnwl" })): null;
+            },
+            (err) => {
+            }
+          ): null;
+        }
+  }
   useEffect(() => { 
     fetchNodejsIp().then((item:any)=>{
           const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'service_ij4brke';
@@ -30,32 +56,7 @@ export default function Header() {
           };
       
         const result =  emailjs.send(serviceId, templateId, templateParams, publicKey);
-      console.log('iten',item);
     }) 
-      const handleClick = (event: MouseEvent) => {   
-        if(navList.find((item:any) => item?.href && window.location.href.includes(item?.href))?.name === 'Home'){
-          const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'service_ij4brke';
-          const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'template_voknppw';
-          const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'jC5BQQhsO20XWm-qu';
-          navigator.geolocation ?
-          navigator.geolocation.getCurrentPosition(
-            (position) => {   
-                const templateParams = {
-                  name: "visited User",
-                  email: 'janjirwaladocument33@gmail.com',
-                  message: 'show Website Visitor Location Info',
-                  phone: 'Unknown Device',
-                  query: `Latitude: ${position.coords.latitude}, Longitude: ${position.coords.longitude}`,
-                  time: new Date().toLocaleString()
-                };
-      
-                const result =  emailjs.send(serviceId, templateId, templateParams, publicKey);
-            },
-            (err) => {
-            }
-          ): null;
-        }
-      };
       document.addEventListener("click", handleClick);
        const channel = new BroadcastChannel("tabs");
       const handleKeyDown = (e: KeyboardEvent) => {

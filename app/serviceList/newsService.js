@@ -79,9 +79,7 @@ export async function fetchNodejsIp() {
 export async function fetchYoutubeVideos(payload) {
   try {
       const response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${payload.query}&type=video&relevanceLanguage=hi&key=${YOUTUBE_API_KEY}`);
-      console.log('response',response);
      const data = await response.json();
-     console.log('dats',data.items);
     return data.items;
   } catch (error) {
     console.error("Error fetching technology news:", error);

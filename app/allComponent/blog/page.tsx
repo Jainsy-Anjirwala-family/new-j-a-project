@@ -50,7 +50,6 @@ export default function Blog() {
             item?.id?.videoId ? item['url'] = `https://www.youtube.com/watch?v=${item?.id?.videoId}` : null;
               return item;})
             setNews(youtubeList);
-            console.log('fetchYoutubeVideos',item);
           })
         }
       }
