@@ -1,0 +1,306 @@
+/* Percentage width utilities: w-per-0 .. w-per-100 */
+/* Generated to provide a class for every integer percentage value */
+
+.w-per-0 { 
+    width: 0% ! important;  
+}
+.w-per-1 { 
+    width: 1% ! important;  
+}
+.w-per-2 { 
+    width: 2% ! important;  
+}
+.w-per-3 { 
+    width: 3% ! important;  
+}
+.w-per-4 { 
+    width: 4% ! important;  
+}
+.w-per-5 { 
+    width: 5% ! important;  
+}
+.w-per-6 { 
+    width: 6% ! important;  
+}
+.w-per-7 { 
+    width: 7% ! important;  
+}
+.w-per-8 { 
+    width: 8% ! important;  
+}
+.w-per-9 { 
+    width: 9% ! important;  
+}
+.w-per-10 { 
+    width: 10% ! important;  
+}
+.w-per-11 { 
+    width: 11% ! important;  
+}
+.w-per-12 { 
+    width: 12% ! important;  
+}
+.w-per-13 { 
+    width: 13% ! important;  
+}
+.w-per-14 { 
+    width: 14% ! important;  
+}
+.w-per-15 { 
+    width: 15% ! important;  
+}
+.w-per-16 { 
+    width: 16% ! important;  
+}
+.w-per-17 { 
+    width: 17% ! important;  
+}
+.w-per-18 { 
+    width: 18% ! important;  
+}
+.w-per-19 { 
+    width: 19% ! important;  
+}
+.w-per-20 { 
+    width: 20% ! important;  
+}
+.w-per-21 { 
+    width: 21% ! important;  
+}
+.w-per-22 { 
+    width: 22% ! important;  
+}
+.w-per-23 { 
+    width: 23% ! important;  
+}
+.w-per-24 { 
+    width: 24% ! important;  
+}
+.w-per-25 { 
+    width: 25% ! important;  
+}
+.w-per-26 { 
+    width: 26% ! important;  
+}
+.w-per-27 { 
+    width: 27% ! important;  
+}
+.w-per-28 { 
+    width: 28% ! important;  
+}
+.w-per-29 { 
+    width: 29% ! important;  
+}
+.w-per-30 { 
+    width: 30% ! important;  
+}
+.w-per-31 { 
+    width: 31% ! important;  
+}
+.w-per-32 { 
+    width: 32% ! important;  
+}
+.w-per-33 { 
+    width: 33% ! important;  
+}
+.w-per-34 { 
+    width: 34% ! important;  
+}
+.w-per-35 { 
+    width: 35% ! important;  
+}
+.w-per-36 { 
+    width: 36% ! important;  
+}
+.w-per-37 { 
+    width: 37% ! important;  
+}
+.w-per-38 { 
+    width: 38% ! important;  
+}
+.w-per-39 { 
+    width: 39% ! important;  
+}
+.w-per-40 { 
+    width: 40% ! important;  
+}
+.w-per-41 { 
+    width: 41% ! important;  
+}
+.w-per-42 { 
+    width: 42% ! important;  
+}
+.w-per-43 { 
+    width: 43% ! important;  
+}
+.w-per-44 { 
+    width: 44% ! important;  
+}
+.w-per-45 { 
+    width: 45% ! important;  
+}
+.w-per-46 { 
+    width: 46% ! important;  
+}
+.w-per-47 { 
+    width: 47% ! important;  
+}
+.w-per-48 { 
+    width: 48% ! important;  
+}
+.w-per-49 { 
+    width: 49% ! important;  
+}
+.w-per-50 { 
+    width: 50% ! important;  
+}
+.w-per-51 { 
+    width: 51% ! important;  
+}
+.w-per-52 { 
+    width: 52% ! important;  
+}
+.w-per-53 { 
+    width: 53% ! important;  
+}
+.w-per-54 { 
+    width: 54% ! important;  
+}
+.w-per-55 { 
+    width: 55% ! important;  
+}
+.w-per-56 { 
+    width: 56% ! important;  
+}
+.w-per-57 { 
+    width: 57% ! important;  
+}
+.w-per-58 { 
+    width: 58% ! important;  
+}
+.w-per-59 { 
+    width: 59% ! important;  
+}
+.w-per-60 { 
+    width: 60% ! important;  
+}
+.w-per-61 { 
+    width: 61% ! important;  
+}
+.w-per-62 { 
+    width: 62% ! important;  
+}
+.w-per-63 { 
+    width: 63% ! important;  
+}
+.w-per-64 { 
+    width: 64% ! important;  
+}
+.w-per-65 { 
+    width: 65% ! important;  
+}
+.w-per-66 { 
+    width: 66% ! important;  
+}
+.w-per-67 { 
+    width: 67% ! important;  
+}
+.w-per-68 { 
+    width: 68% ! important;  
+}
+.w-per-69 { 
+    width: 69% ! important;  
+}
+.w-per-70 { 
+    width: 70% ! important;  
+}
+.w-per-71 { 
+    width: 71% ! important;  
+}
+.w-per-72 { 
+    width: 72% ! important;  
+}
+.w-per-73 { 
+    width: 73% ! important;  
+}
+.w-per-74 { 
+    width: 74% ! important;  
+}
+.w-per-75 { 
+    width: 75% ! important;  
+}
+.w-per-76 { 
+    width: 76% ! important;  
+}
+.w-per-77 { 
+    width: 77% ! important;  
+}
+.w-per-78 { 
+    width: 78% ! important;  
+}
+.w-per-79 { 
+    width: 79% ! important;  
+}
+.w-per-80 { 
+    width: 80% ! important;  
+}
+.w-per-81 { 
+    width: 81% ! important;  
+}
+.w-per-82 { 
+    width: 82% ! important;  
+}
+.w-per-83 { 
+    width: 83% ! important;  
+}
+.w-per-84 { 
+    width: 84% ! important;  
+}
+.w-per-85 { 
+    width: 85% ! important;  
+}
+.w-per-86 { 
+    width: 86% ! important;  
+}
+.w-per-87 { 
+    width: 87% ! important;  
+}
+.w-per-88 { 
+    width: 88% ! important;  
+}
+.w-per-89 { 
+    width: 89% ! important;  
+}
+.w-per-90 { 
+    width: 90% ! important;  
+}
+.w-per-91 { 
+    width: 91% ! important;  
+}
+.w-per-92 { 
+    width: 92% ! important;  
+}
+.w-per-93 { 
+    width: 93% ! important;  
+}
+.w-per-94 { 
+    width: 94% ! important;  
+}
+.w-per-95 { 
+    width: 95% ! important;  
+}
+.w-per-96 { 
+    width: 96% ! important;  
+}
+.w-per-97 { 
+    width: 97% ! important;  
+}
+.w-per-98 { 
+    width: 98% ! important;  
+}
+.w-per-99 { 
+    width: 99% ! important;  
+}
+.w-per-100 { 
+    width: 100% ! important;  
+}

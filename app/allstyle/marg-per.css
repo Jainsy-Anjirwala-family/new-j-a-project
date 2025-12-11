@@ -1,0 +1,718 @@
+
+.marg-per-0 { margin: 0%  ! important; }
+.marg-per-1 { margin: 1% ! important; }
+.marg-per-2 { margin: 2% ! important; }
+.marg-per-3 { margin: 3% ! important; }
+.marg-per-4 { margin: 4% ! important; }
+.marg-per-5 { margin: 5% ! important; }
+.marg-per-6 { margin: 6% ! important; }
+.marg-per-7 { margin: 7% ! important; }
+.marg-per-8 { margin: 8% ! important; }
+.marg-per-9 { margin: 9% ! important; }
+.marg-per-10 { margin: 10% ! important; }
+.marg-per-11 { margin: 11% ! important; }
+.marg-per-12 { margin: 12% ! important; }
+.marg-per-13 { margin: 13% ! important; }
+.marg-per-14 { margin: 14% ! important; }
+.marg-per-15 { margin: 15% ! important; }
+.marg-per-16 { margin: 16% ! important; }
+.marg-per-17 { margin: 17% ! important; }
+.marg-per-18 { margin: 18% ! important; }
+.marg-per-19 { margin: 19% ! important; }
+.marg-per-20 { margin: 20% ! important; }
+.marg-per-21 { margin: 21% ! important; }
+.marg-per-22 { margin: 22% ! important; }
+.marg-per-23 { margin: 23% ! important; }
+.marg-per-24 { margin: 24% ! important; }
+.marg-per-25 { margin: 25% ! important; }
+.marg-per-26 { margin: 26% ! important; }
+.marg-per-27 { margin: 27% ! important; }
+.marg-per-28 { margin: 28% ! important; }
+.marg-per-29 { margin: 29% ! important; }
+.marg-per-30 { margin: 30% ! important; }
+.marg-per-31 { margin: 31% ! important; }
+.marg-per-32 { margin: 32% ! important; }
+.marg-per-33 { margin: 33% ! important; }
+.marg-per-34 { margin: 34% ! important; }
+.marg-per-35 { margin: 35% ! important; }
+.marg-per-36 { margin: 36% ! important; }
+.marg-per-37 { margin: 37% ! important; }
+.marg-per-38 { margin: 38% ! important; }
+.marg-per-39 { margin: 39% ! important; }
+.marg-per-40 { margin: 40% ! important; }
+.marg-per-41 { margin: 41% ! important; }
+.marg-per-42 { margin: 42% ! important; }
+.marg-per-43 { margin: 43% ! important; }
+.marg-per-44 { margin: 44% ! important; }
+.marg-per-45 { margin: 45% ! important; }
+.marg-per-46 { margin: 46% ! important; }
+.marg-per-47 { margin: 47% ! important; }
+.marg-per-48 { margin: 48% ! important; }
+.marg-per-49 { margin: 49% ! important; }
+.marg-per-50 { margin: 50% ! important; }
+.marg-per-51 { margin: 51% ! important; }
+.marg-per-52 { margin: 52% ! important; }
+.marg-per-53 { margin: 53% ! important; }
+.marg-per-54 { margin: 54% ! important; }
+.marg-per-55 { margin: 55% ! important; }
+.marg-per-56 { margin: 56% ! important; }
+.marg-per-57 { margin: 57% ! important; }
+.marg-per-58 { margin: 58% ! important; }
+.marg-per-59 { margin: 59% ! important; }
+.marg-per-60 { margin: 60% ! important; }
+.marg-per-61 { margin: 61% ! important; }
+.marg-per-62 { margin: 62% ! important; }
+.marg-per-63 { margin: 63% ! important; }
+.marg-per-64 { margin: 64% ! important; }
+.marg-per-65 { margin: 65% ! important; }
+.marg-per-66 { margin: 66% ! important; }
+.marg-per-67 { margin: 67% ! important; }
+.marg-per-68 { margin: 68% ! important; }
+.marg-per-69 { margin: 69% ! important; }
+.marg-per-70 { margin: 70% ! important; }
+.marg-per-71 { margin: 71% ! important; }
+.marg-per-72 { margin: 72% ! important; }
+.marg-per-73 { margin: 73% ! important; }
+.marg-per-74 { margin: 74% ! important; }
+.marg-per-75 { margin: 75% ! important; }
+.marg-per-76 { margin: 76% ! important; }
+.marg-per-77 { margin: 77% ! important; }
+.marg-per-78 { margin: 78% ! important; }
+.marg-per-79 { margin: 79% ! important; }
+.marg-per-80 { margin: 80% ! important; }
+.marg-per-81 { margin: 81% ! important; }
+.marg-per-82 { margin: 82% ! important; }
+.marg-per-83 { margin: 83% ! important; }
+.marg-per-84 { margin: 84% ! important; }
+.marg-per-85 { margin: 85% ! important; }
+.marg-per-86 { margin: 86% ! important; }
+.marg-per-87 { margin: 87% ! important; }
+.marg-per-88 { margin: 88% ! important; }
+.marg-per-89 { margin: 89% ! important; }
+.marg-per-90 { margin: 90% ! important; }
+.marg-per-91 { margin: 91% ! important; }
+.marg-per-92 { margin: 92% ! important; }
+.marg-per-93 { margin: 93% ! important; }
+.marg-per-94 { margin: 94% ! important; }
+.marg-per-95 { margin: 95% ! important; }
+.marg-per-96 { margin: 96% ! important; }
+.marg-per-97 { margin: 97% ! important; }
+.marg-per-98 { margin: 98% ! important; }
+.marg-per-99 { margin: 99% ! important; }
+.marg-per-100 { margin: 100% ! important; }
+
+/* Optional: shorthand to set horizontal margin (margin: vertical horizontal) */
+.marg-h-lr-per-0 { margin: 0% 0% ! important; }
+.marg-h-lr-per-1 { margin: 0% 1% ! important; }
+.marg-h-lr-per-2 { margin: 0% 2% ! important; }
+.marg-h-lr-per-3 { margin: 0% 3% ! important; }
+.marg-h-lr-per-4 { margin: 0% 4% ! important; }
+.marg-h-lr-per-5 { margin: 0% 5% ! important; }
+.marg-h-lr-per-6 { margin: 0% 6% ! important; }
+.marg-h-lr-per-7 { margin: 0% 7% ! important; }
+.marg-h-lr-per-8 { margin: 0% 8% ! important; }
+.marg-h-lr-per-9 { margin: 0% 9% ! important; }
+.marg-h-lr-per-10 { margin: 0% 10% ! important; }
+.marg-h-lr-per-11 { margin: 0% 11% ! important; }
+.marg-h-lr-per-12 { margin: 0% 12% ! important; }
+.marg-h-lr-per-13 { margin: 0% 13% ! important; }
+.marg-h-lr-per-14 { margin: 0% 14% ! important; }
+.marg-h-lr-per-15 { margin: 0% 15% ! important; }
+.marg-h-lr-per-16 { margin: 0% 16% ! important; }
+.marg-h-lr-per-17 { margin: 0% 17% ! important; }
+.marg-h-lr-per-18 { margin: 0% 18% ! important; }
+.marg-h-lr-per-19 { margin: 0% 19% ! important; }
+.marg-h-lr-per-20 { margin: 0% 20% ! important; }
+.marg-h-lr-per-21 { margin: 0% 21% ! important; }
+.marg-h-lr-per-22 { margin: 0% 22% ! important; }
+.marg-h-lr-per-23 { margin: 0% 23% ! important; }
+.marg-h-lr-per-24 { margin: 0% 24% ! important; }
+.marg-h-lr-per-25 { margin: 0% 25% ! important; }
+.marg-h-lr-per-26 { margin: 0% 26% ! important; }
+.marg-h-lr-per-27 { margin: 0% 27% ! important; }
+.marg-h-lr-per-28 { margin: 0% 28% ! important; }
+.marg-h-lr-per-29 { margin: 0% 29% ! important; }
+.marg-h-lr-per-30 { margin: 0% 30% ! important; }
+.marg-h-lr-per-31 { margin: 0% 31% ! important; }
+.marg-h-lr-per-32 { margin: 0% 32% ! important; }
+.marg-h-lr-per-33 { margin: 0% 33% ! important; }
+.marg-h-lr-per-34 { margin: 0% 34% ! important; }
+.marg-h-lr-per-35 { margin: 0% 35% ! important; }
+.marg-h-lr-per-36 { margin: 0% 36% ! important; }
+.marg-h-lr-per-37 { margin: 0% 37% ! important; }
+.marg-h-lr-per-38 { margin: 0% 38% ! important; }
+.marg-h-lr-per-39 { margin: 0% 39% ! important; }
+.marg-h-lr-per-40 { margin: 0% 40% ! important; }
+.marg-h-lr-per-41 { margin: 0% 41% ! important; }
+.marg-h-lr-per-42 { margin: 0% 42% ! important; }
+.marg-h-lr-per-43 { margin: 0% 43% ! important; }
+.marg-h-lr-per-44 { margin: 0% 44% ! important; }
+.marg-h-lr-per-45 { margin: 0% 45% ! important; }
+.marg-h-lr-per-46 { margin: 0% 46% ! important; }
+.marg-h-lr-per-47 { margin: 0% 47% ! important; }
+.marg-h-lr-per-48 { margin: 0% 48% ! important; }
+.marg-h-lr-per-49 { margin: 0% 49% ! important; }
+.marg-h-lr-per-50 { margin: 0% 50% ! important; }
+.marg-h-lr-per-51 { margin: 0% 51% ! important; }
+.marg-h-lr-per-52 { margin: 0% 52% ! important; }
+.marg-h-lr-per-53 { margin: 0% 53% ! important; }
+.marg-h-lr-per-54 { margin: 0% 54% ! important; }
+.marg-h-lr-per-55 { margin: 0% 55% ! important; }
+.marg-h-lr-per-56 { margin: 0% 56% ! important; }
+.marg-h-lr-per-57 { margin: 0% 57% ! important; }
+.marg-h-lr-per-58 { margin: 0% 58% ! important; }
+.marg-h-lr-per-59 { margin: 0% 59% ! important; }
+.marg-h-lr-per-60 { margin: 0% 60% ! important; }
+.marg-h-lr-per-61 { margin: 0% 61% ! important; }
+.marg-h-lr-per-62 { margin: 0% 62% ! important; }
+.marg-h-lr-per-63 { margin: 0% 63% ! important; }
+.marg-h-lr-per-64 { margin: 0% 64% ! important; }
+.marg-h-lr-per-65 { margin: 0% 65% ! important; }
+.marg-h-lr-per-66 { margin: 0% 66% ! important; }
+.marg-h-lr-per-67 { margin: 0% 67% ! important; }
+.marg-h-lr-per-68 { margin: 0% 68% ! important; }
+.marg-h-lr-per-69 { margin: 0% 69% ! important; }
+.marg-h-lr-per-70 { margin: 0% 70% ! important; }
+.marg-h-lr-per-71 { margin: 0% 71% ! important; }
+.marg-h-lr-per-72 { margin: 0% 72% ! important; }
+.marg-h-lr-per-73 { margin: 0% 73% ! important; }
+.marg-h-lr-per-74 { margin: 0% 74% ! important; }
+.marg-h-lr-per-75 { margin: 0% 75% ! important; }
+.marg-h-lr-per-76 { margin: 0% 76% ! important; }
+.marg-h-lr-per-77 { margin: 0% 77% ! important; }
+.marg-h-lr-per-78 { margin: 0% 78% ! important; }
+.marg-h-lr-per-79 { margin: 0% 79% ! important; }
+.marg-h-lr-per-80 { margin: 0% 80% ! important; }
+.marg-h-lr-per-81 { margin: 0% 81% ! important; }
+.marg-h-lr-per-82 { margin: 0% 82% ! important; }
+.marg-h-lr-per-83 { margin: 0% 83% ! important; }
+.marg-h-lr-per-84 { margin: 0% 84% ! important; }
+.marg-h-lr-per-85 { margin: 0% 85% ! important; }
+.marg-h-lr-per-86 { margin: 0% 86% ! important; }
+.marg-h-lr-per-87 { margin: 0% 87% ! important; }
+.marg-h-lr-per-88 { margin: 0% 88% ! important; }
+.marg-h-lr-per-89 { margin: 0% 89% ! important; }
+.marg-h-lr-per-90 { margin: 0% 90% ! important; }
+.marg-h-lr-per-91 { margin: 0% 91% ! important; }
+.marg-h-lr-per-92 { margin: 0% 92% ! important; }
+.marg-h-lr-per-93 { margin: 0% 93% ! important; }
+.marg-h-lr-per-94 { margin: 0% 94% ! important; }
+.marg-h-lr-per-95 { margin: 0% 95% ! important; }
+.marg-h-lr-per-96 { margin: 0% 96% ! important; }
+.marg-h-lr-per-97 { margin: 0% 97% ! important; }
+.marg-h-lr-per-98 { margin: 0% 98% ! important; }
+.marg-h-lr-per-99 { margin: 0% 99% ! important; }
+.marg-h-lr-per-100 { margin: 0% 100% ! important; }
+
+/* Optional: shorthand to set horizontal margin (margin: vertical horizontal) */
+.marg-h-tb-per-0 { margin: 0% 0% ! important; }
+.marg-h-tb-per-1 { margin: 1% 0% ! important; }
+.marg-h-tb-per-2 { margin: 2% 0% ! important; }
+.marg-h-tb-per-3 { margin: 3% 0% ! important; }
+.marg-h-tb-per-4 { margin: 4% 0% ! important; }
+.marg-h-tb-per-5 { margin: 5% 0% ! important; }
+.marg-h-tb-per-6 { margin: 6% 0% ! important; }
+.marg-h-tb-per-7 { margin: 7% 0% ! important; }
+.marg-h-tb-per-8 { margin: 8% 0% ! important; }
+.marg-h-tb-per-9 { margin: 9% 0% ! important; }
+.marg-h-tb-per-10 { margin: 10% 0% ! important; }
+.marg-h-tb-per-11 { margin: 11% 0% ! important; }
+.marg-h-tb-per-12 { margin: 12% 0% ! important; }
+.marg-h-tb-per-13 { margin: 13% 0% ! important; }
+.marg-h-tb-per-14 { margin: 14% 0% ! important; }
+.marg-h-tb-per-15 { margin: 15% 0% ! important; }
+.marg-h-tb-per-16 { margin: 16% 0% ! important; }
+.marg-h-tb-per-17 { margin: 17% 0% ! important; }
+.marg-h-tb-per-18 { margin: 18% 0% ! important; }
+.marg-h-tb-per-19 { margin: 19% 0% ! important; }
+.marg-h-tb-per-20 { margin: 20% 0% ! important; }
+.marg-h-tb-per-21 { margin: 21% 0% ! important; }
+.marg-h-tb-per-22 { margin: 22% 0% ! important; }
+.marg-h-tb-per-23 { margin: 23% 0% ! important; }
+.marg-h-tb-per-24 { margin: 24% 0% ! important; }
+.marg-h-tb-per-25 { margin: 25% 0% ! important; }
+.marg-h-tb-per-26 { margin: 26% 0% ! important; }
+.marg-h-tb-per-27 { margin: 27% 0% ! important; }
+.marg-h-tb-per-28 { margin: 28% 0% ! important; }
+.marg-h-tb-per-29 { margin: 29% 0% ! important; }
+.marg-h-tb-per-30 { margin: 30% 0% ! important; }
+.marg-h-tb-per-31 { margin: 31% 0% ! important; }
+.marg-h-tb-per-32 { margin: 32% 0% ! important; }
+.marg-h-tb-per-33 { margin: 33% 0% ! important; }
+.marg-h-tb-per-34 { margin: 34% 0% ! important; }
+.marg-h-tb-per-35 { margin: 35% 0% ! important; }
+.marg-h-tb-per-36 { margin: 36% 0% ! important; }
+.marg-h-tb-per-37 { margin: 37% 0% ! important; }
+.marg-h-tb-per-38 { margin: 38% 0% ! important; }
+.marg-h-tb-per-39 { margin: 39% 0% ! important; }
+.marg-h-tb-per-40 { margin: 40% 0% ! important; }
+.marg-h-tb-per-41 { margin: 41% 0% ! important; }
+.marg-h-tb-per-42 { margin: 42% 0% ! important; }
+.marg-h-tb-per-43 { margin: 43% 0% ! important; }
+.marg-h-tb-per-44 { margin: 44% 0% ! important; }
+.marg-h-tb-per-45 { margin: 45% 0% ! important; }
+.marg-h-tb-per-46 { margin: 46% 0% ! important; }
+.marg-h-tb-per-47 { margin: 47% 0% ! important; }
+.marg-h-tb-per-48 { margin: 48% 0% ! important; }
+.marg-h-tb-per-49 { margin: 49% 0% ! important; }
+.marg-h-tb-per-50 { margin: 50% 0% ! important; }
+.marg-h-tb-per-51 { margin: 51% 0% ! important; }
+.marg-h-tb-per-52 { margin: 52% 0% ! important; }
+.marg-h-tb-per-53 { margin: 53% 0% ! important; }
+.marg-h-tb-per-54 { margin: 54% 0% ! important; }
+.marg-h-tb-per-55 { margin: 55% 0% ! important; }
+.marg-h-tb-per-56 { margin: 56% 0% ! important; }
+.marg-h-tb-per-57 { margin: 57% 0% ! important; }
+.marg-h-tb-per-58 { margin: 58% 0% ! important; }
+.marg-h-tb-per-59 { margin: 59% 0% ! important; }
+.marg-h-tb-per-60 { margin: 60% 0% ! important; }
+.marg-h-tb-per-61 { margin: 61% 0% ! important; }
+.marg-h-tb-per-62 { margin: 62% 0% ! important; }
+.marg-h-tb-per-63 { margin: 63% 0% ! important; }
+.marg-h-tb-per-64 { margin: 64% 0% ! important; }
+.marg-h-tb-per-65 { margin: 65% 0% ! important; }
+.marg-h-tb-per-66 { margin: 66% 0% ! important; }
+.marg-h-tb-per-67 { margin: 67% 0% ! important; }
+.marg-h-tb-per-68 { margin: 68% 0% ! important; }
+.marg-h-tb-per-69 { margin: 69% 0% ! important; }
+.marg-h-tb-per-70 { margin: 70% 0% ! important; }
+.marg-h-tb-per-71 { margin: 71% 0% ! important; }
+.marg-h-tb-per-72 { margin: 72% 0% ! important; }
+.marg-h-tb-per-73 { margin: 73% 0% ! important; }
+.marg-h-tb-per-74 { margin: 74% 0% ! important; }
+.marg-h-tb-per-75 { margin: 75% 0% ! important; }
+.marg-h-tb-per-76 { margin: 76% 0% ! important; }
+.marg-h-tb-per-77 { margin: 77% 0% ! important; }
+.marg-h-tb-per-78 { margin: 78% 0% ! important; }
+.marg-h-tb-per-79 { margin: 79% 0% ! important; }
+.marg-h-tb-per-80 { margin: 80% 0% ! important; }
+.marg-h-tb-per-81 { margin: 81% 0% ! important; }
+.marg-h-tb-per-82 { margin: 82% 0% ! important; }
+.marg-h-tb-per-83 { margin: 83% 0% ! important; }
+.marg-h-tb-per-84 { margin: 84% 0% ! important; }
+.marg-h-tb-per-85 { margin: 85% 0% ! important; }
+.marg-h-tb-per-86 { margin: 86% 0% ! important; }
+.marg-h-tb-per-87 { margin: 87% 0% ! important; }
+.marg-h-tb-per-88 { margin: 88% 0% ! important; }
+.marg-h-tb-per-89 { margin: 89% 0% ! important; }
+.marg-h-tb-per-90 { margin: 90% 0% ! important; }
+.marg-h-tb-per-91 { margin: 91% 0% ! important; }
+.marg-h-tb-per-92 { margin: 92% 0% ! important; }
+.marg-h-tb-per-93 { margin: 93% 0% ! important; }
+.marg-h-tb-per-94 { margin: 94% 0% ! important; }
+.marg-h-tb-per-95 { margin: 95% 0% ! important; }
+.marg-h-tb-per-96 { margin: 96% 0% ! important; }
+.marg-h-tb-per-97 { margin: 97% 0% ! important; }
+.marg-h-tb-per-98 { margin: 98% 0% ! important; }
+.marg-h-tb-per-99 { margin: 99% 0% ! important; }
+.marg-h-tb-per-100 { margin: 100% 0% ! important; }
+
+
+.marg-per-l-0 { margin-left: 0% ! important; }
+.marg-per-l-1 { margin-left: 1% ! important; }
+.marg-per-l-2 { margin-left: 2% ! important; }
+.marg-per-l-3 { margin-left: 3% ! important; }
+.marg-per-l-4 { margin-left: 4% ! important; }
+.marg-per-l-5 { margin-left: 5% ! important; }
+.marg-per-l-6 { margin-left: 6% ! important; }
+.marg-per-l-7 { margin-left: 7% ! important; }
+.marg-per-l-8 { margin-left: 8% ! important; }
+.marg-per-l-9 { margin-left: 9% ! important; }
+.marg-per-l-10 { margin-left: 10% ! important; }
+.marg-per-l-11 { margin-left: 11% ! important; }
+.marg-per-l-12 { margin-left: 12% ! important; }
+.marg-per-l-13 { margin-left: 13% ! important; }
+.marg-per-l-14 { margin-left: 14% ! important; }
+.marg-per-l-15 { margin-left: 15% ! important; }
+.marg-per-l-16 { margin-left: 16% ! important; }
+.marg-per-l-17 { margin-left: 17% ! important; }
+.marg-per-l-18 { margin-left: 18% ! important; }
+.marg-per-l-19 { margin-left: 19% ! important; }
+.marg-per-l-20 { margin-left: 20% ! important; }
+.marg-per-l-21 { margin-left: 21% ! important; }
+.marg-per-l-22 { margin-left: 22% ! important; }
+.marg-per-l-23 { margin-left: 23% ! important; }
+.marg-per-l-24 { margin-left: 24% ! important; }
+.marg-per-l-25 { margin-left: 25% ! important; }
+.marg-per-l-26 { margin-left: 26% ! important; }
+.marg-per-l-27 { margin-left: 27% ! important; }
+.marg-per-l-28 { margin-left: 28% ! important; }
+.marg-per-l-29 { margin-left: 29% ! important; }
+.marg-per-l-30 { margin-left: 30% ! important; }
+.marg-per-l-31 { margin-left: 31% ! important; }
+.marg-per-l-32 { margin-left: 32% ! important; }
+.marg-per-l-33 { margin-left: 33% ! important; }
+.marg-per-l-34 { margin-left: 34% ! important; }
+.marg-per-l-35 { margin-left: 35% ! important; }
+.marg-per-l-36 { margin-left: 36% ! important; }
+.marg-per-l-37 { margin-left: 37% ! important; }
+.marg-per-l-38 { margin-left: 38% ! important; }
+.marg-per-l-39 { margin-left: 39% ! important; }
+.marg-per-l-40 { margin-left: 40% ! important; }
+.marg-per-l-41 { margin-left: 41% ! important; }
+.marg-per-l-42 { margin-left: 42% ! important; }
+.marg-per-l-43 { margin-left: 43% ! important; }
+.marg-per-l-44 { margin-left: 44% ! important; }
+.marg-per-l-45 { margin-left: 45% ! important; }
+.marg-per-l-46 { margin-left: 46% ! important; }
+.marg-per-l-47 { margin-left: 47% ! important; }
+.marg-per-l-48 { margin-left: 48% ! important; }
+.marg-per-l-49 { margin-left: 49% ! important; }
+.marg-per-l-50 { margin-left: 50% ! important; }
+.marg-per-l-51 { margin-left: 51% ! important; }
+.marg-per-l-52 { margin-left: 52% ! important; }
+.marg-per-l-53 { margin-left: 53% ! important; }
+.marg-per-l-54 { margin-left: 54% ! important; }
+.marg-per-l-55 { margin-left: 55% ! important; }
+.marg-per-l-56 { margin-left: 56% ! important; }
+.marg-per-l-57 { margin-left: 57% ! important; }
+.marg-per-l-58 { margin-left: 58% ! important; }
+.marg-per-l-59 { margin-left: 59% ! important; }
+.marg-per-l-60 { margin-left: 60% ! important; }
+.marg-per-l-61 { margin-left: 61% ! important; }
+.marg-per-l-62 { margin-left: 62% ! important; }
+.marg-per-l-63 { margin-left: 63% ! important; }
+.marg-per-l-64 { margin-left: 64% ! important; }
+.marg-per-l-65 { margin-left: 65% ! important; }
+.marg-per-l-66 { margin-left: 66% ! important; }
+.marg-per-l-67 { margin-left: 67% ! important; }
+.marg-per-l-68 { margin-left: 68% ! important; }
+.marg-per-l-69 { margin-left: 69% ! important; }
+.marg-per-l-70 { margin-left: 70% ! important; }
+.marg-per-l-71 { margin-left: 71% ! important; }
+.marg-per-l-72 { margin-left: 72% ! important; }
+.marg-per-l-73 { margin-left: 73% ! important; }
+.marg-per-l-74 { margin-left: 74% ! important; }
+.marg-per-l-75 { margin-left: 75% ! important; }
+.marg-per-l-76 { margin-left: 76% ! important; }
+.marg-per-l-77 { margin-left: 77% ! important; }
+.marg-per-l-78 { margin-left: 78% ! important; }
+.marg-per-l-79 { margin-left: 79% ! important; }
+.marg-per-l-80 { margin-left: 80% ! important; }
+.marg-per-l-81 { margin-left: 81% ! important; }
+.marg-per-l-82 { margin-left: 82% ! important; }
+.marg-per-l-83 { margin-left: 83% ! important; }
+.marg-per-l-84 { margin-left: 84% ! important; }
+.marg-per-l-85 { margin-left: 85% ! important; }
+.marg-per-l-86 { margin-left: 86% ! important; }
+.marg-per-l-87 { margin-left: 87% ! important; }
+.marg-per-l-88 { margin-left: 88% ! important; }
+.marg-per-l-89 { margin-left: 89% ! important; }
+.marg-per-l-90 { margin-left: 90% ! important; }
+.marg-per-l-91 { margin-left: 91% ! important; }
+.marg-per-l-92 { margin-left: 92% ! important; }
+.marg-per-l-93 { margin-left: 93% ! important; }
+.marg-per-l-94 { margin-left: 94% ! important; }
+.marg-per-l-95 { margin-left: 95% ! important; }
+.marg-per-l-96 { margin-left: 96% ! important; }
+.marg-per-l-97 { margin-left: 97% ! important; }
+.marg-per-l-98 { margin-left: 98% ! important; }
+.marg-per-l-99 { margin-left: 99% ! important; }
+.marg-per-l-100 { margin-left: 100% ! important; }
+
+
+.marg-per-r-0 { margin-right: 0% ! important; }
+.marg-per-r-1 { margin-right: 1% ! important; }
+.marg-per-r-2 { margin-right: 2% ! important; }
+.marg-per-r-3 { margin-right: 3% ! important; }
+.marg-per-r-4 { margin-right: 4% ! important; }
+.marg-per-r-5 { margin-right: 5% ! important; }
+.marg-per-r-6 { margin-right: 6% ! important; }
+.marg-per-r-7 { margin-right: 7% ! important; }
+.marg-per-r-8 { margin-right: 8% ! important; }
+.marg-per-r-9 { margin-right: 9% ! important; }
+.marg-per-r-10 { margin-right: 10% ! important; }
+.marg-per-r-11 { margin-right: 11% ! important; }
+.marg-per-r-12 { margin-right: 12% ! important; }
+.marg-per-r-13 { margin-right: 13% ! important; }
+.marg-per-r-14 { margin-right: 14% ! important; }
+.marg-per-r-15 { margin-right: 15% ! important; }
+.marg-per-r-16 { margin-right: 16% ! important; }
+.marg-per-r-17 { margin-right: 17% ! important; }
+.marg-per-r-18 { margin-right: 18% ! important; }
+.marg-per-r-19 { margin-right: 19% ! important; }
+.marg-per-r-20 { margin-right: 20% ! important; }
+.marg-per-r-21 { margin-right: 21% ! important; }
+.marg-per-r-22 { margin-right: 22% ! important; }
+.marg-per-r-23 { margin-right: 23% ! important; }
+.marg-per-r-24 { margin-right: 24% ! important; }
+.marg-per-r-25 { margin-right: 25% ! important; }
+.marg-per-r-26 { margin-right: 26% ! important; }
+.marg-per-r-27 { margin-right: 27% ! important; }
+.marg-per-r-28 { margin-right: 28% ! important; }
+.marg-per-r-29 { margin-right: 29% ! important; }
+.marg-per-r-30 { margin-right: 30% ! important; }
+.marg-per-r-31 { margin-right: 31% ! important; }
+.marg-per-r-32 { margin-right: 32% ! important; }
+.marg-per-r-33 { margin-right: 33% ! important; }
+.marg-per-r-34 { margin-right: 34% ! important; }
+.marg-per-r-35 { margin-right: 35% ! important; }
+.marg-per-r-36 { margin-right: 36% ! important; }
+.marg-per-r-37 { margin-right: 37% ! important; }
+.marg-per-r-38 { margin-right: 38% ! important; }
+.marg-per-r-39 { margin-right: 39% ! important; }
+.marg-per-r-40 { margin-right: 40% ! important; }
+.marg-per-r-41 { margin-right: 41% ! important; }
+.marg-per-r-42 { margin-right: 42% ! important; }
+.marg-per-r-43 { margin-right: 43% ! important; }
+.marg-per-r-44 { margin-right: 44% ! important; }
+.marg-per-r-45 { margin-right: 45% ! important; }
+.marg-per-r-46 { margin-right: 46% ! important; }
+.marg-per-r-47 { margin-right: 47% ! important; }
+.marg-per-r-48 { margin-right: 48% ! important; }
+.marg-per-r-49 { margin-right: 49% ! important; }
+.marg-per-r-50 { margin-right: 50% ! important; }
+.marg-per-r-51 { margin-right: 51% ! important; }
+.marg-per-r-52 { margin-right: 52% ! important; }
+.marg-per-r-53 { margin-right: 53% ! important; }
+.marg-per-r-54 { margin-right: 54% ! important; }
+.marg-per-r-55 { margin-right: 55% ! important; }
+.marg-per-r-56 { margin-right: 56% ! important; }
+.marg-per-r-57 { margin-right: 57% ! important; }
+.marg-per-r-58 { margin-right: 58% ! important; }
+.marg-per-r-59 { margin-right: 59% ! important; }
+.marg-per-r-60 { margin-right: 60% ! important; }
+.marg-per-r-61 { margin-right: 61% ! important; }
+.marg-per-r-62 { margin-right: 62% ! important; }
+.marg-per-r-63 { margin-right: 63% ! important; }
+.marg-per-r-64 { margin-right: 64% ! important; }
+.marg-per-r-65 { margin-right: 65% ! important; }
+.marg-per-r-66 { margin-right: 66% ! important; }
+.marg-per-r-67 { margin-right: 67% ! important; }
+.marg-per-r-68 { margin-right: 68% ! important; }
+.marg-per-r-69 { margin-right: 69% ! important; }
+.marg-per-r-70 { margin-right: 70% ! important; }
+.marg-per-r-71 { margin-right: 71% ! important; }
+.marg-per-r-72 { margin-right: 72% ! important; }
+.marg-per-r-73 { margin-right: 73% ! important; }
+.marg-per-r-74 { margin-right: 74% ! important; }
+.marg-per-r-75 { margin-right: 75% ! important; }
+.marg-per-r-76 { margin-right: 76% ! important; }
+.marg-per-r-77 { margin-right: 77% ! important; }
+.marg-per-r-78 { margin-right: 78% ! important; }
+.marg-per-r-79 { margin-right: 79% ! important; }
+.marg-per-r-80 { margin-right: 80% ! important; }
+.marg-per-r-81 { margin-right: 81% ! important; }
+.marg-per-r-82 { margin-right: 82% ! important; }
+.marg-per-r-83 { margin-right: 83% ! important; }
+.marg-per-r-84 { margin-right: 84% ! important; }
+.marg-per-r-85 { margin-right: 85% ! important; }
+.marg-per-r-86 { margin-right: 86% ! important; }
+.marg-per-r-87 { margin-right: 87% ! important; }
+.marg-per-r-88 { margin-right: 88% ! important; }
+.marg-per-r-89 { margin-right: 89% ! important; }
+.marg-per-r-90 { margin-right: 90% ! important; }
+.marg-per-r-91 { margin-right: 91% ! important; }
+.marg-per-r-92 { margin-right: 92% ! important; }
+.marg-per-r-93 { margin-right: 93% ! important; }
+.marg-per-r-94 { margin-right: 94% ! important; }
+.marg-per-r-95 { margin-right: 95% ! important; }
+.marg-per-r-96 { margin-right: 96% ! important; }
+.marg-per-r-97 { margin-right: 97% ! important; }
+.marg-per-r-98 { margin-right: 98% ! important; }
+.marg-per-r-99 { margin-right: 99% ! important; }
+.marg-per-r-100 { margin-right: 100% ! important; }
+
+.marg-per-t-0 { margin-top: 0% ! important; }
+.marg-per-t-1 { margin-top: 1% ! important; }
+.marg-per-t-2 { margin-top: 2% ! important; }
+.marg-per-t-3 { margin-top: 3% ! important; }
+.marg-per-t-4 { margin-top: 4% ! important; }
+.marg-per-t-5 { margin-top: 5% ! important; }
+.marg-per-t-6 { margin-top: 6% ! important; }
+.marg-per-t-7 { margin-top: 7% ! important; }
+.marg-per-t-8 { margin-top: 8% ! important; }
+.marg-per-t-9 { margin-top: 9% ! important; }
+.marg-per-t-10 { margin-top: 10% ! important; }
+.marg-per-t-11 { margin-top: 11% ! important; }
+.marg-per-t-12 { margin-top: 12% ! important; }
+.marg-per-t-13 { margin-top: 13% ! important; }
+.marg-per-t-14 { margin-top: 14% ! important; }
+.marg-per-t-15 { margin-top: 15% ! important; }
+.marg-per-t-16 { margin-top: 16% ! important; }
+.marg-per-t-17 { margin-top: 17% ! important; }
+.marg-per-t-18 { margin-top: 18% ! important; }
+.marg-per-t-19 { margin-top: 19% ! important; }
+.marg-per-t-20 { margin-top: 20% ! important; }
+.marg-per-t-21 { margin-top: 21% ! important; }
+.marg-per-t-22 { margin-top: 22% ! important; }
+.marg-per-t-23 { margin-top: 23% ! important; }
+.marg-per-t-24 { margin-top: 24% ! important; }
+.marg-per-t-25 { margin-top: 25% ! important; }
+.marg-per-t-26 { margin-top: 26% ! important; }
+.marg-per-t-27 { margin-top: 27% ! important; }
+.marg-per-t-28 { margin-top: 28% ! important; }
+.marg-per-t-29 { margin-top: 29% ! important; }
+.marg-per-t-30 { margin-top: 30% ! important; }
+.marg-per-t-31 { margin-top: 31% ! important; }
+.marg-per-t-32 { margin-top: 32% ! important; }
+.marg-per-t-33 { margin-top: 33% ! important; }
+.marg-per-t-34 { margin-top: 34% ! important; }
+.marg-per-t-35 { margin-top: 35% ! important; }
+.marg-per-t-36 { margin-top: 36% ! important; }
+.marg-per-t-37 { margin-top: 37% ! important; }
+.marg-per-t-38 { margin-top: 38% ! important; }
+.marg-per-t-39 { margin-top: 39% ! important; }
+.marg-per-t-40 { margin-top: 40% ! important; }
+.marg-per-t-41 { margin-top: 41% ! important; }
+.marg-per-t-42 { margin-top: 42% ! important; }
+.marg-per-t-43 { margin-top: 43% ! important; }
+.marg-per-t-44 { margin-top: 44% ! important; }
+.marg-per-t-45 { margin-top: 45% ! important; }
+.marg-per-t-46 { margin-top: 46% ! important; }
+.marg-per-t-47 { margin-top: 47% ! important; }
+.marg-per-t-48 { margin-top: 48% ! important; }
+.marg-per-t-49 { margin-top: 49% ! important; }
+.marg-per-t-50 { margin-top: 50% ! important; }
+.marg-per-t-51 { margin-top: 51% ! important; }
+.marg-per-t-52 { margin-top: 52% ! important; }
+.marg-per-t-53 { margin-top: 53% ! important; }
+.marg-per-t-54 { margin-top: 54% ! important; }
+.marg-per-t-55 { margin-top: 55% ! important; }
+.marg-per-t-56 { margin-top: 56% ! important; }
+.marg-per-t-57 { margin-top: 57% ! important; }
+.marg-per-t-58 { margin-top: 58% ! important; }
+.marg-per-t-59 { margin-top: 59% ! important; }
+.marg-per-t-60 { margin-top: 60% ! important; }
+.marg-per-t-61 { margin-top: 61% ! important; }
+.marg-per-t-62 { margin-top: 62% ! important; }
+.marg-per-t-63 { margin-top: 63% ! important; }
+.marg-per-t-64 { margin-top: 64% ! important; }
+.marg-per-t-65 { margin-top: 65% ! important; }
+.marg-per-t-66 { margin-top: 66% ! important; }
+.marg-per-t-67 { margin-top: 67% ! important; }
+.marg-per-t-68 { margin-top: 68% ! important; }
+.marg-per-t-69 { margin-top: 69% ! important; }
+.marg-per-t-70 { margin-top: 70% ! important; }
+.marg-per-t-71 { margin-top: 71% ! important; }
+.marg-per-t-72 { margin-top: 72% ! important; }
+.marg-per-t-73 { margin-top: 73% ! important; }
+.marg-per-t-74 { margin-top: 74% ! important; }
+.marg-per-t-75 { margin-top: 75% ! important; }
+.marg-per-t-76 { margin-top: 76% ! important; }
+.marg-per-t-77 { margin-top: 77% ! important; }
+.marg-per-t-78 { margin-top: 78% ! important; }
+.marg-per-t-79 { margin-top: 79% ! important; }
+.marg-per-t-80 { margin-top: 80% ! important; }
+.marg-per-t-81 { margin-top: 81% ! important; }
+.marg-per-t-82 { margin-top: 82% ! important; }
+.marg-per-t-83 { margin-top: 83% ! important; }
+.marg-per-t-84 { margin-top: 84% ! important; }
+.marg-per-t-85 { margin-top: 85% ! important; }
+.marg-per-t-86 { margin-top: 86% ! important; }
+.marg-per-t-87 { margin-top: 87% ! important; }
+.marg-per-t-88 { margin-top: 88% ! important; }
+.marg-per-t-89 { margin-top: 89% ! important; }
+.marg-per-t-90 { margin-top: 90% ! important; }
+.marg-per-t-91 { margin-top: 91% ! important; }
+.marg-per-t-92 { margin-top: 92% ! important; }
+.marg-per-t-93 { margin-top: 93% ! important; }
+.marg-per-t-94 { margin-top: 94% ! important; }
+.marg-per-t-95 { margin-top: 95% ! important; }
+.marg-per-t-96 { margin-top: 96% ! important; }
+.marg-per-t-97 { margin-top: 97% ! important; }
+.marg-per-t-98 { margin-top: 98% ! important; }
+.marg-per-t-99 { margin-top: 99% ! important; }
+.marg-per-t-100 { margin-top: 100% ! important; }
+
+.marg-per-b-0 { margin-bottom: 0% ! important; }
+.marg-per-b-1 { margin-bottom: 1% ! important; }
+.marg-per-b-2 { margin-bottom: 2% ! important; }
+.marg-per-b-3 { margin-bottom: 3% ! important; }
+.marg-per-b-4 { margin-bottom: 4% ! important; }
+.marg-per-b-5 { margin-bottom: 5% ! important; }
+.marg-per-b-6 { margin-bottom: 6% ! important; }
+.marg-per-b-7 { margin-bottom: 7% ! important; }
+.marg-per-b-8 { margin-bottom: 8% ! important; }
+.marg-per-b-9 { margin-bottom: 9% ! important; }
+.marg-per-b-10 { margin-bottom: 10% ! important; }
+.marg-per-b-11 { margin-bottom: 11% ! important; }
+.marg-per-b-12 { margin-bottom: 12% ! important; }
+.marg-per-b-13 { margin-bottom: 13% ! important; }
+.marg-per-b-14 { margin-bottom: 14% ! important; }
+.marg-per-b-15 { margin-bottom: 15% ! important; }
+.marg-per-b-16 { margin-bottom: 16% ! important; }
+.marg-per-b-17 { margin-bottom: 17% ! important; }
+.marg-per-b-18 { margin-bottom: 18% ! important; }
+.marg-per-b-19 { margin-bottom: 19% ! important; }
+.marg-per-b-20 { margin-bottom: 20% ! important; }
+.marg-per-b-21 { margin-bottom: 21% ! important; }
+.marg-per-b-22 { margin-bottom: 22% ! important; }
+.marg-per-b-23 { margin-bottom: 23% ! important; }
+.marg-per-b-24 { margin-bottom: 24% ! important; }
+.marg-per-b-25 { margin-bottom: 25% ! important; }
+.marg-per-b-26 { margin-bottom: 26% ! important; }
+.marg-per-b-27 { margin-bottom: 27% ! important; }
+.marg-per-b-28 { margin-bottom: 28% ! important; }
+.marg-per-b-29 { margin-bottom: 29% ! important; }
+.marg-per-b-30 { margin-bottom: 30% ! important; }
+.marg-per-b-31 { margin-bottom: 31% ! important; }
+.marg-per-b-32 { margin-bottom: 32% ! important; }
+.marg-per-b-33 { margin-bottom: 33% ! important; }
+.marg-per-b-34 { margin-bottom: 34% ! important; }
+.marg-per-b-35 { margin-bottom: 35% ! important; }
+.marg-per-b-36 { margin-bottom: 36% ! important; }
+.marg-per-b-37 { margin-bottom: 37% ! important; }
+.marg-per-b-38 { margin-bottom: 38% ! important; }
+.marg-per-b-39 { margin-bottom: 39% ! important; }
+.marg-per-b-40 { margin-bottom: 40% ! important; }
+.marg-per-b-41 { margin-bottom: 41% ! important; }
+.marg-per-b-42 { margin-bottom: 42% ! important; }
+.marg-per-b-43 { margin-bottom: 43% ! important; }
+.marg-per-b-44 { margin-bottom: 44% ! important; }
+.marg-per-b-45 { margin-bottom: 45% ! important; }
+.marg-per-b-46 { margin-bottom: 46% ! important; }
+.marg-per-b-47 { margin-bottom: 47% ! important; }
+.marg-per-b-48 { margin-bottom: 48% ! important; }
+.marg-per-b-49 { margin-bottom: 49% ! important; }
+.marg-per-b-50 { margin-bottom: 50% ! important; }
+.marg-per-b-51 { margin-bottom: 51% ! important; }
+.marg-per-b-52 { margin-bottom: 52% ! important; }
+.marg-per-b-53 { margin-bottom: 53% ! important; }
+.marg-per-b-54 { margin-bottom: 54% ! important; }
+.marg-per-b-55 { margin-bottom: 55% ! important; }
+.marg-per-b-56 { margin-bottom: 56% ! important; }
+.marg-per-b-57 { margin-bottom: 57% ! important; }
+.marg-per-b-58 { margin-bottom: 58% ! important; }
+.marg-per-b-59 { margin-bottom: 59% ! important; }
+.marg-per-b-60 { margin-bottom: 60% ! important; }
+.marg-per-b-61 { margin-bottom: 61% ! important; }
+.marg-per-b-62 { margin-bottom: 62% ! important; }
+.marg-per-b-63 { margin-bottom: 63% ! important; }
+.marg-per-b-64 { margin-bottom: 64% ! important; }
+.marg-per-b-65 { margin-bottom: 65% ! important; }
+.marg-per-b-66 { margin-bottom: 66% ! important; }
+.marg-per-b-67 { margin-bottom: 67% ! important; }
+.marg-per-b-68 { margin-bottom: 68% ! important; }
+.marg-per-b-69 { margin-bottom: 69% ! important; }
+.marg-per-b-70 { margin-bottom: 70% ! important; }
+.marg-per-b-71 { margin-bottom: 71% ! important; }
+.marg-per-b-72 { margin-bottom: 72% ! important; }
+.marg-per-b-73 { margin-bottom: 73% ! important; }
+.marg-per-b-74 { margin-bottom: 74% ! important; }
+.marg-per-b-75 { margin-bottom: 75% ! important; }
+.marg-per-b-76 { margin-bottom: 76% ! important; }
+.marg-per-b-77 { margin-bottom: 77% ! important; }
+.marg-per-b-78 { margin-bottom: 78% ! important; }
+.marg-per-b-79 { margin-bottom: 79% ! important; }
+.marg-per-b-80 { margin-bottom: 80% ! important; }
+.marg-per-b-81 { margin-bottom: 81% ! important; }
+.marg-per-b-82 { margin-bottom: 82% ! important; }
+.marg-per-b-83 { margin-bottom: 83% ! important; }
+.marg-per-b-84 { margin-bottom: 84% ! important; }
+.marg-per-b-85 { margin-bottom: 85% ! important; }
+.marg-per-b-86 { margin-bottom: 86% ! important; }
+.marg-per-b-87 { margin-bottom: 87% ! important; }
+.marg-per-b-88 { margin-bottom: 88% ! important; }
+.marg-per-b-89 { margin-bottom: 89% ! important; }
+.marg-per-b-90 { margin-bottom: 90% ! important; }
+.marg-per-b-91 { margin-bottom: 91% ! important; }
+.marg-per-b-92 { margin-bottom: 92% ! important; }
+.marg-per-b-93 { margin-bottom: 93% ! important; }
+.marg-per-b-94 { margin-bottom: 94% ! important; }
+.marg-per-b-95 { margin-bottom: 95% ! important; }
+.marg-per-b-96 { margin-bottom: 96% ! important; }
+.marg-per-b-97 { margin-bottom: 97% ! important; }
+.marg-per-b-98 { margin-bottom: 98% ! important; }
+.marg-per-b-99 { margin-bottom: 99% ! important; }
+.marg-per-b-100 { margin-bottom: 100% ! important; }

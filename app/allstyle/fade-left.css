@@ -1,0 +1,52 @@
+/* globals.css or a CSS module */
+.fade-left {
+  opacity: 0;
+  transform: translateX(50px); /* Start 50px to the right */
+}
+
+@keyframes fadeLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Move to original position */
+  }
+}
+
+.animation-delay-fade-left-1s {
+  animation: fadeLeft 1s ease forwards;
+}
+
+.animation-delay-fade-left-2s {
+  animation: fadeLeft 2s ease forwards;
+}
+
+.animation-delay-fade-left-3s {
+  animation: fadeLeft 3s ease forwards;
+}
+
+.animation-delay-fade-left-4s {
+  animation: fadeLeft 4s ease forwards;
+}
+
+.animation-delay-fade-left-5s {
+  animation: fadeLeft 5s ease forwards;
+}
+
+.animation-delay-fade-left-6s {
+  animation: fadeLeft 6s ease forwards;
+}
+
+.animation-delay-fade-left-7s {
+  animation: fadeLeft 7s ease forwards;
+}
+
+.animation-delay-fade-left-8s {
+  animation: fadeLeft 8s ease forwards;
+}
+
+.animation-delay-fade-left-9s {
+  animation: fadeLeft 9s ease forwards;
+}
+
+.animation-delay-fade-left-10s {
+  animation: fadeLeft 10s ease forwards;
+}

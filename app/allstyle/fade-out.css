@@ -1,0 +1,53 @@
+/* globals.css or component CSS module */
+.fade-out {
+    opacity: 1;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.animation-delay-fade-out-1s {
+  animation: fadeOut 1s ease forwards;
+}
+
+.animation-delay-fade-out-2s {
+  animation: fadeOut 2s ease forwards;
+}
+
+.animation-delay-fade-out-3s {
+  animation: fadeOut 3s ease forwards;
+}
+
+.animation-delay-fade-out-4s {
+  animation: fadeOut 4s ease forwards;
+}
+
+.animation-delay-fade-out-5s {
+  animation: fadeOut 5s ease forwards;
+}
+
+.animation-delay-fade-out-6s {
+  animation: fadeOut 6s ease forwards;
+}
+
+.animation-delay-fade-out-7s {
+  animation: fadeOut 7s ease forwards;
+}
+
+.animation-delay-fade-out-8s {
+  animation: fadeOut 8s ease forwards;
+}
+
+.animation-delay-fade-out-9s {
+  animation: fadeOut 9s ease forwards;
+}
+
+.animation-delay-fade-out-10s {
+  animation: fadeOut 10s ease forwards;
+}

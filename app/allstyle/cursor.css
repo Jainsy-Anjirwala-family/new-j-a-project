@@ -1,0 +1,106 @@
+
+.cursor-style-alias{
+    cursor: alias ! important; 
+}
+.cursor-style-all-scroll{
+    cursor: all-scroll ! important; 
+}
+.cursor-style-auto{
+    cursor: auto ! important; 
+}
+.cursor-style-cell{
+    cursor: cell ! important; 
+}
+.cursor-style-col-resize{
+    cursor: col-resize ! important; 
+}
+.cursor-style-context-menu{
+    cursor: context-menu ! important; 
+}
+.cursor-style-copy{
+    cursor: copy ! important; 
+}
+.cursor-style-crosshair{
+    cursor: crosshair ! important; 
+}
+.cursor-style-default{
+    cursor: default ! important; 
+}
+.cursor-style-e-resize{
+    cursor: e-resize ! important; 
+}
+.cursor-style-ew-resize{
+    cursor: ew-resize ! important; 
+}
+.cursor-style-grab{
+    cursor: -webkit-grab ! important;  cursor: grab ! important; 
+}
+.cursor-style-grabbing{
+    cursor: -webkit-grabbing ! important;  cursor: grabbing ! important; 
+}
+.cursor-style-help{
+    cursor: help ! important; 
+}
+.cursor-style-move{
+    cursor: move ! important; 
+}
+.cursor-style-n-resize{
+    cursor: n-resize ! important; 
+}
+.cursor-style-ne-resize{
+    cursor: ne-resize ! important; 
+}
+.cursor-style-nesw-resize{
+    cursor: nesw-resize ! important; 
+}
+.cursor-style-ns-resize{
+    cursor: ns-resize ! important; 
+}
+.cursor-style-nw-resize{
+    cursor: nw-resize ! important; 
+}
+.cursor-style-nwse-resize{
+    cursor: nwse-resize ! important; 
+}
+.cursor-style-no-drop{
+    cursor: no-drop ! important; 
+}
+.cursor-style-none{
+    cursor: none ! important; 
+}
+.cursor-style-not-allowed{
+    cursor: not-allowed ! important; 
+}
+.cursor-style-pointer{
+    cursor: pointer ! important; 
+}
+.cursor-style-progress{
+    cursor: progress ! important; 
+}
+.cursor-style-row-resize{
+    cursor: row-resize ! important; 
+}
+.cursor-style-s-resize{
+    cursor: s-resize ! important; 
+}
+.cursor-style-se-resize{
+    cursor: se-resize ! important; 
+}
+.cursor-style-sw-resize{
+    cursor: sw-resize ! important; 
+}
+.cursor-style-text{
+    cursor: text ! important; 
+}
+.cursor-style-w-resize{
+    cursor: w-resize ! important; 
+}
+.cursor-style-wait{
+    cursor: wait ! important; 
+}
+.cursor-style-zoom-in{
+    cursor: zoom-in ! important; 
+}
+.cursor-style-zoom-out{
+    cursor: zoom-out ! important; 
+}

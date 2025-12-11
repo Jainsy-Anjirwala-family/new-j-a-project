@@ -1,0 +1,49 @@
+@import "./fade-in.css";
+@import "./fade-out.css";  
+@import "./fade-left.css";
+@import "./fade-right.css";
+@import "./zoom-in.css";
+@import "./width-per.css";
+@import "./marg-per.css";
+@import "./all-color.css";
+@import "./height-per.css";
+@import "./padd-per.css";
+@import "./icon-style.css";
+@import ".//border-style.css";
+@import "./cursor.css";
+@import "./bg-img.css";
+@import "./font-color.css";
+@import "./all-bg-liner.css";
+@import "./height-px.css";
+@import "./height-vh.css";
+@import "./font-size.css";
+@import "./height-pc.css";
+
+.display-flex {
+  display: flex;
+}
+
+
+.new-line {
+  word-break: break-all; /* forces a new line */
+}
+
+.over-element{
+  position: absolute;
+  top: 40%;
+  left: 40%;
+}
+
+
+.display-grid-sq {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+
+.about-over-element {
+  position: absolute;
+  top: 40%;
+  left: 60%;
+
+}

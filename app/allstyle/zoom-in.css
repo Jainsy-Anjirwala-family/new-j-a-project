@@ -1,0 +1,52 @@
+.zoom-in {
+  transform: scale(0);
+  opacity: 0;
+}
+
+@keyframes zoomIn {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+.animation-delay-zoom-in-1s {
+  animation: zoomIn 1s ease forwards;
+}
+
+.animation-delay-zoom-in-2s {
+  animation: zoomIn 2s ease forwards;
+}
+
+.animation-delay-zoom-in-3s {
+  animation: zoomIn 3s ease forwards;
+}
+
+.animation-delay-zoom-in-4s {
+  animation: zoomIn 4s ease forwards;
+}
+
+.animation-delay-zoom-in-5s {
+  animation: zoomIn 5s ease forwards;
+}
+
+.animation-delay-zoom-in-6s {
+  animation: zoomIn 6s ease forwards;
+}
+
+.animation-delay-zoom-in-7s {
+  animation: zoomIn 7s ease forwards;
+}
+
+.animation-delay-zoom-in-8s {
+  animation: zoomIn 8s ease forwards;
+}
+
+.animation-delay-zoom-in-9s {
+  animation: zoomIn 9s ease forwards;
+}
+
+.animation-delay-zoom-in-10s {
+  animation: zoomIn 10s ease forwards;
+}

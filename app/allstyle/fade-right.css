@@ -1,0 +1,52 @@
+/* globals.css or CSS module */
+.fade-right {
+  opacity: 0;
+  transform: translateX(-50px); /* Start 50px to the left */
+}
+
+@keyframes fadeRight {
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Move to original position */
+  }
+}
+
+.animation-delay-fade-right-1s {
+  animation: fadeRight 1s ease forwards;
+}
+
+.animation-delay-fade-right-2s {
+  animation: fadeRight 2s ease forwards;
+}
+
+.animation-delay-fade-right-3s {
+  animation: fadeRight 3s ease forwards;
+}
+
+.animation-delay-fade-right-4s {
+  animation: fadeRight 4s ease forwards;
+}
+
+.animation-delay-fade-right-5s {
+  animation: fadeRight 5s ease forwards;
+}
+
+.animation-delay-fade-right-6s {
+  animation: fadeRight 6s ease forwards;
+}
+
+.animation-delay-fade-right-7s {
+  animation: fadeRight 7s ease forwards;
+}
+
+.animation-delay-fade-right-8s {
+  animation: fadeRight 8s ease forwards;
+}
+
+.animation-delay-fade-right-9s {
+  animation: fadeRight 9s ease forwards;
+}
+
+.animation-delay-fade-right-10s {
+  animation: fadeRight 10s ease forwards;
+}
