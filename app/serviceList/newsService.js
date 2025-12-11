@@ -7,7 +7,7 @@ const BASE_URL = "https://gnews.io/api/v4";
 const YT_API_KEY = 'AIzaSyCynJbpZkq0rQ1zD3aE15LTw3nMfDPyMDs';
 export async function getTradingNews() {
   try {
-    const res = await fetch(`${BASE_URL}/everything?q=trading&sortBy=publishedAt&language=en&apiKey=${NEWS_API_KEY}&language=en`);
+    const res = await fetch(`${BASE_URL}/top-headlines?lang=en&country=us&token=${NEWS_API_KEY}`);
 
     if (!res.ok) {
       throw new Error("Failed to fetch trading news");
@@ -23,7 +23,7 @@ export async function getTradingNews() {
 
 export async function getTechnologyNews() {
   try {
-    const res = await fetch(`${BASE_URL}/top-headlines?category=technology&language=en&pageSize=10&apiKey=${NEWS_API_KEY}`);
+    const res = await fetch(`${BASE_URL}/top-headlines?category=technology&language=en&token=${NEWS_API_KEY}`);
 
     if (!res.ok) {
       throw new Error("Failed to fetch technology news");
