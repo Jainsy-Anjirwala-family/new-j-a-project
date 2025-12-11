@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from '@fortawesome/free-solid-svg-icons';
 import { toast } from "react-hot-toast";
 import * as UAParser from "ua-parser-js";
-import { getTechnologyNews, getYoutubeVideos } from "../../serviceList/newsService";
+import { getTechnologyNews, getYoutubeVideos, fetchYoutubeVideos } from "../../serviceList/newsService";
 import { Swiper, SwiperSlide } from "swiper/react";
 import YouTube from "react-youtube";
 import Slider from "react-slick";
@@ -15,12 +15,23 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 
 export default function About() {
+  const OtherYoutubeVideos=()=>{
+        fetchYoutubeVideos({'query': 'technology'}).then((item:any)=>{
+         const youtubeList =  item.map((item:any)=>{ 
+          item['youTubeIds'] = item?.id?.videoId; item['title'] = item?.snippet?.title;
+          item['description'] = item?.snippet?.description;
+          item?.id?.videoId ? item['url'] = `https://www.youtube.com/watch?v=${item?.id?.videoId}` : null;
+           return item;})
+         setTechnologyNews(youtubeList);
+          console.log('fetchYoutubeVideos',item);
+        })
+  }
   const googleVideos = [
-    { youTubeVideo: "l3XV3HJZTxo", url: 'https://www.youtube.com/watch?v=l3XV3HJZTxo&utm_source=chatgpt.com', title: "Google I/O 2024 Keynote" },
-    { youTubeVideo: "U10l4WjJxlE", url: 'https://www.youtube.com/watch?v=U10l4WjJxlE', title: "Google Gemini Full Demo" },
-    { youTubeVideo: "cNQxb8wzpas", url: 'https://www.youtube.com/watch?v=cNQxb8wzpas', title: "Google AI New Features" },
-    { youTubeVideo: "ibxSgbT-duI", url: 'https://www.youtube.com/watch?v=ibxSgbT-duI', title: "Google Maps AI Updates" },
-    { youTubeVideo: "qWN5kTwvZWE", url: 'https://www.youtube.com/watch?v=qWN5kTwvZWE', title: "Google Search AI Updates" },
+    { youTubeIds: "l3XV3HJZTxo", url: 'https://www.youtube.com/watch?v=l3XV3HJZTxo&utm_source=chatgpt.com', title: "Google I/O 2024 Keynote" },
+    { youTubeIds: "U10l4WjJxlE", url: 'https://www.youtube.com/watch?v=U10l4WjJxlE', title: "Google Gemini Full Demo" },
+    { youTubeIds: "cNQxb8wzpas", url: 'https://www.youtube.com/watch?v=cNQxb8wzpas', title: "Google AI New Features" },
+    { youTubeIds: "ibxSgbT-duI", url: 'https://www.youtube.com/watch?v=ibxSgbT-duI', title: "Google Maps AI Updates" },
+    { youTubeIds: "qWN5kTwvZWE", url: 'https://www.youtube.com/watch?v=qWN5kTwvZWE', title: "Google Search AI Updates" },
   ];
   const [technologyNews, setTechnologyNews] = useState<any[]>([]);
   const [loaderObj, setLoaderObj] = useState({loading: false});
@@ -34,14 +45,14 @@ export default function About() {
         // setLoaderObj({ loading: false });
         setTechnologyNews(videos);
       } catch (error) {
-        setTechnologyNews(googleVideos);
+        // setTechnologyNews(googleVideos);
         // setLoaderObj({ loading: false });
         console.error(error);
       }
     };
   useEffect(() => {
     setLoaderObj({ loading: true });
-    getTechnologyNews().then((data: any) =>{ returnWithVideo(data);})
+    getTechnologyNews().then((data: any) =>{ data?.length > 0 ? returnWithVideo(data) : OtherYoutubeVideos();})
   }, []);
 
   async  function handleChange(e: any) {
@@ -121,6 +132,15 @@ export default function About() {
                                   opts={{
                                     height: String((window.innerHeight / 2)),
                                     width: String((window.innerWidth)),
+                                    playerVars: { autoplay: 0 },
+                                  }}
+                                />
+                              ) : article?.youTubeIds ? (
+                                <YouTube
+                                  videoId={article.youTubeIds}
+                                  opts={{
+                                    height: String((window.innerHeight / 2)),
+                                    width: String((window.innerWidth / 2.0)),
                                     playerVars: { autoplay: 0 },
                                   }}
                                 />

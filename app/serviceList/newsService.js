@@ -10,18 +10,20 @@ const BASE_URL = "https://gnews.io/api/v4";
 // const BASE_URL = "https://newsapi.org/v2";
 // const YT_API_KEY = 'AIzaSyCynJbpZkq0rQ1zD3aE15LTw3nMfDPyMDs';
 const YT_API_KEY = process.env.YT_API_KEY || 'AIzaSyCynJbpZkq0rQ1zD3aE15LTw3nMfDPyMDs';
+// const YOUTUBE_API_KEY = 'AIzaSyCoD0_astyUx-YBmJdHx-lOHnXfzonzUMI';
+const YOUTUBE_API_KEY = 'AIzaSyDOT2s6qzildzIzajuiPTp9cph-aMi5BBU';
 export async function getTradingNews() {
   try {
     // const res = await fetch(`${BASE_URL}/everything?q=trading&sortBy=publishedAt&language=en&apiKey=${NEWS_API_KEY}&language=en`);
     const res = await fetch(`${BASE_URL}/search?q=trading&token=${NEWS_API_KEY}&lang=en`);
 
     if (!res.ok) {
-      throw new Error("Failed to fetch trading news");
+    return [];
+    } else{
+      const data = await res.json();
+      // return NextResponse.json(data.articles);
+      return data.articles; // only return articles
     }
-
-    const data = await res.json();
-    // return NextResponse.json(data.articles);
-    return data.articles; // only return articles
   } catch (error) {
     console.error("Error fetching trading news:", error);
     return [];
@@ -34,12 +36,12 @@ export async function getTechnologyNews() {
     const res = await fetch(`${BASE_URL}/top-headlines?token=${NEWS_API_KEY}&lang=en&category=technology&max=10`);
 
     if (!res.ok) {
-      throw new Error("Failed to fetch technology news");
+    return [];
+    } else{
+      const data = await res.json();
+      // return NextResponse.json(data.articles);
+      return data.articles; // only return articles
     }
-
-    const data = await res.json();
-    // return NextResponse.json(data.articles);
-    return data.articles; // only return articles
   } catch (error) {
     console.error("Error fetching technology news:", error);
     return [];
@@ -71,5 +73,18 @@ export async function fetchNodejsIp() {
   } catch (error) {
     console.error("Error in handler:", error);
     return { error: "Internal Server Error" };
+  }
+}
+
+export async function fetchYoutubeVideos(payload) {
+  try {
+      const response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${payload.query}&type=video&relevanceLanguage=hi&key=${YOUTUBE_API_KEY}`);
+      console.log('response',response);
+     const data = await response.json();
+     console.log('dats',data.items);
+    return data.items;
+  } catch (error) {
+    console.error("Error fetching technology news:", error);
+    return [];
   }
 }

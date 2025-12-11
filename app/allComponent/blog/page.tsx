@@ -3,11 +3,16 @@ import { useEffect, useState } from "react";
 import Router from "next/router";
 import NProgress from "nprogress";
 import "nprogress/nprogress.css";
-import { getTradingNews } from "../../serviceList/newsService";
+import { getTradingNews, fetchYoutubeVideos } from "../../serviceList/newsService";
 import toast from "react-hot-toast";
 
 export default function Blog() {
   const [news, setNews] = useState([]);
+  let setBtnNameList = [
+    {'label': 'trading New', 'value':  'trading+news'},
+    {'label': 'trending New', 'value':  'trending+news'},
+  ];
+  const [btnName, setBtnName] = useState("trading New");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -21,7 +26,7 @@ export default function Blog() {
 
     // Page data loader
     setLoading(true);
-    getTradingNews().then((data: any) =>{ setNews(data)}).finally(() => {setLoading(false)});
+    getTradingNews().then((data: any) =>{ data?.length > 0 ? setNews(data): youtubeNewsList({'name': btnName}); }).finally(() => {setLoading(false)});
 
     return () => {
       Router.events.off("routeChangeStart", start);
@@ -30,9 +35,32 @@ export default function Blog() {
     };
   }, []);
 
+    function youtubeNewsList(event:any){
+        const findName =  setBtnNameList.find((item:any)=> item?.label === event?.name);
+        const differenceName = setBtnNameList.find((item:any)=>  item?.label !== event?.name);
+        if(findName){
+          differenceName ? setBtnName(differenceName.label): null;
+          fetchYoutubeVideos({'query': findName?.value}).then((item:any)=>{
+            const youtubeList =  item.map((item:any)=>{ 
+            item['youTubeIds'] = item?.id?.videoId; item['title'] = item?.snippet?.title;
+            item['urlToImage'] = item?.snippet?.thumbnails?.high?.url;
+            item['source'] = {
+              'name': item?.snippet?.channelTitle
+            }
+            item?.id?.videoId ? item['url'] = `https://www.youtube.com/watch?v=${item?.id?.videoId}` : null;
+              return item;})
+            setNews(youtubeList);
+            console.log('fetchYoutubeVideos',item);
+          })
+        }
+      }
+
   return (
     <div>
+      <div className="col-md-12 col-xs-12 col-sm-12 col-lg-12 col-xxl-12 col-xl-12 display-flex">
       <h1>Latest Trading News</h1>
+      <button type="button" className="btn btn-info marg-per-l-60" onClick={() => youtubeNewsList({'name': btnName}) } >{btnName}</button>
+      </div>
       {loading ? (
         <div className="col-md-12 col-xs-12 col-sm-12 col-lg-12 col-xxl-12 col-xl-12">
           <div className="dual-ring">
@@ -67,7 +95,7 @@ export default function Blog() {
       ) : news?.length > 0 ? (
         <div className="display-grid-sq">
           {news.map((item: any, index: number) => (
-            <div key={index} className="col-md-12 col-xs-12 col-sm-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div key={index} className="">
                 <a href={item.url} target="_blank" rel="noopener noreferrer">
                   <img
                     src={item?.urlToImage ? item.urlToImage : item?.image ? item.image : '/default-news-image.jpg'}
@@ -76,7 +104,7 @@ export default function Blog() {
                 </a>
                     <h5>{item.title}</h5>
                 <div className="display-flex">
-                    <p>{item.source?.name} - {item.publishedAt ? new Date(item.publishedAt).toLocaleString() : ''}</p>
+                    <p>{item?.source?.name} - {item?.publishedAt ? new Date(item.publishedAt).toLocaleString() : ''}</p>
                       <a href={item.url} target="_blank" className="marg-per-l-40" rel="noopener noreferrer">
                         Read More
                       </a>
@@ -85,7 +113,7 @@ export default function Blog() {
           ))}
         </div>
       ): (
-        <p>No news available.</p>
+        <h1>No news available.</h1>
       ) }
 
       {/* Skeleton styles */}

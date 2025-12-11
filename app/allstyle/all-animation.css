@@ -51,3 +51,7 @@
 .overflow-scroll-element {
   overflow: scroll !important;
 }
+
+.float-right-element {
+  float: right;
+}
