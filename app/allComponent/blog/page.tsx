@@ -33,7 +33,7 @@ export default function Blog() {
   return (
     <div>
       <h1>Latest Trading News</h1>
-      {loading && (
+      {loading ? (
         <div className="col-md-12 col-xs-12 col-sm-12 col-lg-12 col-xxl-12 col-xl-12">
           <div className="dual-ring">
             <span className="over-element">
@@ -64,10 +64,7 @@ export default function Blog() {
             </span>
           </div>
         </div>
-      )}
-
-      {/* Real Data */}
-      {!loading && (
+      ) : news?.length > 0 ? (
         <div className="display-grid-sq">
           {news.map((item: any, index: number) => (
             <div key={index} className="col-md-12 col-xs-12 col-sm-12 col-lg-12 col-xl-12 col-xxl-12">
@@ -87,7 +84,9 @@ export default function Blog() {
             </div>
           ))}
         </div>
-      )}
+      ): (
+        <p>No news available.</p>
+      ) }
 
       {/* Skeleton styles */}
       <style jsx>{`
