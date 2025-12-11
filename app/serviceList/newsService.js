@@ -1,7 +1,9 @@
 // services/newsService.js
 
-const NEWS_API_KEY = '7b96fca484bd4784b2b40ace65311ff8';
-const BASE_URL = "https://newsapi.org/v2";
+// const NEWS_API_KEY = '7b96fca484bd4784b2b40ace65311ff8';
+// const BASE_URL = "https://newsapi.org/v2";
+const NEWS_API_KEY = '6875a6bd8fe67ef7f8b405c8d7eeeddb';
+const BASE_URL = "https://gnews.io/api/v4";
 const YT_API_KEY = 'AIzaSyCynJbpZkq0rQ1zD3aE15LTw3nMfDPyMDs';
 export async function getTradingNews() {
   try {
