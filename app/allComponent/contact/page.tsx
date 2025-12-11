@@ -48,9 +48,9 @@ async function handleSubmit(e:any) {
   e.preventDefault();
   if (validationContactUs(formData)){
     toast.loading("Sending...");
-    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '';
-    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '';
-    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || '';
+        const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'service_j88zgkk';
+        const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'template_voknppw';
+        const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'jC5BQQhsO20XWm-qu';
   
     // Simple validation with clearer diagnostics (no secret values printed)
     const missing: string[] = [];
