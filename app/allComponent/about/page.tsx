@@ -127,7 +127,7 @@ export default function About() {
                                   />
                               ) : (
                                 <img
-                                  src={item.urlToImage}
+                                  src={item?.urlToImage ? item.urlToImage : item?.image ? item.image : '/default-news-image.jpg'}
                                   className="d-block w-100"
                                   alt="no image"
                                   style={{ width: '100%', height: `${mediaHeight}px`, objectFit: 'cover' }}

@@ -73,7 +73,7 @@ export default function Blog() {
             <div key={index} className="col-md-12 col-xs-12 col-sm-12 col-lg-12 col-xl-12 col-xxl-12">
                 <a href={item.url} target="_blank" rel="noopener noreferrer">
                   <img
-                    src={item.urlToImage}
+                    src={item?.urlToImage ? item.urlToImage : item?.image ? item.image : '/default-news-image.jpg'}
                     style={{ width: "100%", height: 300, borderRadius: 10 }}
                   />
                 </a>
