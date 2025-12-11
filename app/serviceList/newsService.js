@@ -1,5 +1,6 @@
 // services/newsService.js
 
+import { NextResponse } from "next/server";
 // const NEWS_API_KEY = '7b96fca484bd4784b2b40ace65311ff8';
 // const BASE_URL = "https://newsapi.org/v2";
 // const NEWS_API_KEY = '6875a6bd8fe67ef7f8b405c8d7eeeddb';
@@ -17,6 +18,7 @@ export async function getTradingNews() {
     }
 
     const data = await res.json();
+    // return NextResponse.json(data.articles);
     return data.articles; // only return articles
   } catch (error) {
     console.error("Error fetching trading news:", error);
@@ -33,6 +35,7 @@ export async function getTechnologyNews() {
     }
 
     const data = await res.json();
+    // return NextResponse.json(data.articles);
     return data.articles; // only return articles
   } catch (error) {
     console.error("Error fetching technology news:", error);
@@ -50,6 +53,8 @@ export async function getYoutubeVideos(payload) {
       const ytData = await res.json();
       const videoId = ytData.items?.[0]?.id?.videoId || null;
     return {...payload, 'youTubeVideo': videoId}; // only return videoId
+    // const result = {...payload, 'youTubeVideo': videoId};
+    // return NextResponse.json(result);
   } catch (error) {
     console.error("Error fetching technology news:", error);
     return [];

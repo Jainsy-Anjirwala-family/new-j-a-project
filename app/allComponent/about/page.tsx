@@ -51,7 +51,7 @@ export default function About() {
     const parser:any = new UAParser.UAParser();
       if (typeof window !== 'undefined'){
         e.preventDefault();
-        const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'service_j88zgkk';
+        const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'service_ij4brke';
         const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'template_voknppw';
         const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'jC5BQQhsO20XWm-qu';
 

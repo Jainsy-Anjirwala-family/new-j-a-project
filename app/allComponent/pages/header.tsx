@@ -17,7 +17,7 @@ export default function Header() {
   useEffect(() => {
       const handleClick = (event: MouseEvent) => {      // You can add more logic here, e.g., analytics, custom behavior
         if(navList.find((item:any) => item?.href && window.location.href.includes(item?.href))?.name === 'Home'){
-          const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'service_j88zgkk';
+          const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'service_ij4brke';
           const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'template_voknppw';
           const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'jC5BQQhsO20XWm-qu';
           navigator.geolocation ?

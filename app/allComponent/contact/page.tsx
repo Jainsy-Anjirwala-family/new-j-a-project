@@ -48,7 +48,7 @@ async function handleSubmit(e:any) {
   e.preventDefault();
   if (validationContactUs(formData)){
     toast.loading("Sending...");
-        const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'service_j88zgkk';
+        const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || 'service_ij4brke';
         const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || 'template_voknppw';
         const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || 'jC5BQQhsO20XWm-qu';
   

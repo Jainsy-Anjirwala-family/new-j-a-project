@@ -21,7 +21,7 @@ export default function Blog() {
 
     // Page data loader
     setLoading(true);
-    getTradingNews().then((data: any) => setNews(data)).finally(() => {setLoading(false)});
+    getTradingNews().then((data: any) =>{ setNews(data)}).finally(() => {setLoading(false)});
 
     return () => {
       Router.events.off("routeChangeStart", start);
