@@ -27,7 +27,7 @@ export default function Blog() {
 
     // Page data loader
     setLoading(true);
-    getTradingNews().then((data: any) =>{ data?.length > 0 ? setNews(data): youtubeNewsList({'name': btnName}); }).finally(() => { setLoading(false);});
+    getTradingNews().then((data: any) =>{ data?.length > 0 ? setNews(data): youtubeNewsList({'name': btnName});  data?.length > 0 ? setLoading(false):setLoading(true);  });
 
     return () => {
       Router.events.off("routeChangeStart", start);
@@ -49,7 +49,8 @@ export default function Blog() {
               'name': item?.snippet?.channelTitle
             }
             item?.id?.videoId ? item['url'] = `https://www.youtube.com/watch?v=${item?.id?.videoId}` : null;
-              return item;})
+              return item;});
+            setLoading(false);
             setNews(youtubeList);
           })
         }
