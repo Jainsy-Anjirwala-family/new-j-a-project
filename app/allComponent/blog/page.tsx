@@ -112,9 +112,9 @@ export default function Blog() {
             </div>
           ))}
         </div>
-      ): (
+      ): !loading && news?.length == 0 ? (
         <h1>No news available.</h1>
-      ) }
+      ) : null}
 
       {/* Skeleton styles */}
       <style jsx>{`
