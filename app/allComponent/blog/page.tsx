@@ -7,6 +7,7 @@ import { getTradingNews, fetchYoutubeVideos } from "../../serviceList/newsServic
 import toast from "react-hot-toast";
 
 export default function Blog() {
+  const [windowHeight, setWindowHeight] = useState(window.innerWidth.toString());
   const [news, setNews] = useState([]);
   let setBtnNameList = [
     {'label': 'trading New', 'value':  'trading+news'},
@@ -26,7 +27,7 @@ export default function Blog() {
 
     // Page data loader
     setLoading(true);
-    getTradingNews().then((data: any) =>{ data?.length > 0 ? setNews(data): youtubeNewsList({'name': btnName}); }).finally(() => {setLoading(false)});
+    getTradingNews().then((data: any) =>{ data?.length > 0 ? setNews(data): youtubeNewsList({'name': btnName}); }).finally(() => { setLoading(false);});
 
     return () => {
       Router.events.off("routeChangeStart", start);
@@ -62,8 +63,8 @@ export default function Blog() {
       </div>
       {loading ? (
         <div className="col-md-12 col-xs-12 col-sm-12 col-lg-12 col-xxl-12 col-xl-12">
-          <div className="dual-ring">
-            <span className="over-element">
+          <div className={`${Number(windowHeight) > 426 ? 'dual-ring': 'mobile-dual-ring' }`}>
+            <span className={`${Number(windowHeight) > 426 ? 'over-element': 'mobile-over-element' }`}>
               <svg width="200" height="200" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" className="border-radius-px-140">
                 <defs>
                   <linearGradient id="jaGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -136,6 +137,28 @@ export default function Blog() {
           animation: dual-ring 1.2s linear infinite;
         }
         @keyframes dual-ring {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+        .mobile-dual-ring {
+          display: inline-block;
+          width: 300px;
+          height: 300px;
+          margin: 9% 15%;
+        }
+        .mobile-dual-ring:after {
+          content: " ";
+          display: block;
+          width: 282px;
+          height: 282px;
+          margin: 9% 15%;
+          margin: 1px;
+          border-radius: 50%;
+          border: 5px solid #3498db;
+          border-color: #3498db transparent #3498db transparent;
+          animation: mobile-dual-ring 1.2s linear infinite;
+        }
+        @keyframes mobile-dual-ring {
           0% { transform: rotate(0deg); }
           100% { transform: rotate(360deg); }
         }

@@ -9,12 +9,15 @@ import { getTechnologyNews, getYoutubeVideos, fetchYoutubeVideos } from "../../s
 import { Swiper, SwiperSlide } from "swiper/react";
 import YouTube from "react-youtube";
 import Slider from "react-slick";
-import "swiper/css";
-import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
+import { Autoplay, Navigation, Keyboard  } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/autoplay";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 export default function About() {
+  const [windowHeight, setWindowHeight] = useState(window.innerWidth.toString());
   const OtherYoutubeVideos=()=>{
         fetchYoutubeVideos({'query': 'technology'}).then((item:any)=>{
          const youtubeList =  item.map((item:any)=>{ 
@@ -103,7 +106,7 @@ export default function About() {
     }
 
   return (
-    <div className="col-md-12 col-xs-12 col-sm-12 col-lg-12 col-xxl-12 col-xl-12 display-flex marg-per-t-4">
+    <div className={`${Number(windowHeight) > 426 ? 'display-flex': '' } marg-per-t-4 col-md-12 col-xs-12 col-sm-12 col-lg-12 col-xxl-12 col-xl-12`} >
       <div className="col-md-5 col-xs-12 col-sm-12 col-lg-5 col-xxl-5 col-xl-5 marg-per-l-4">
         <button type="button" className="fr" onClick={handleChange}>
            <FontAwesomeIcon icon={faDownload} />
@@ -115,7 +118,8 @@ export default function About() {
       <div className="col-md-6 col-xs-12 col-sm-12 col-lg-6 col-xxl-6 col-xl-6 ht-pc-40 border-all-px-2 border-radius-px-10 border-color-grey">
               {
                 technologyNews.length > 0 ? (
-                  <Swiper slidesPerView={1} spaceBetween={10} pagination={{ clickable: true }} modules={[Pagination]}>
+                  <Swiper slidesPerView={1} spaceBetween={10}  autoplay={{delay: 2500,disableOnInteraction: false,}}
+                        loop={true} modules={[Autoplay]}>
                       {technologyNews.map((article, index) => (
                          <SwiperSlide key={index}>
                           {article.youTubeVideo ? (
@@ -154,10 +158,10 @@ export default function About() {
                       ))}
                   </Swiper>
                   ):(
-                    loaderObj && loaderObj?.loading ? (
+                   loaderObj && loaderObj?.loading ? (
                       <div className="col-md-12 col-xs-12 col-sm-12 col-lg-12 col-xxl-12 col-xl-12">
-                        <div className="dual-ring">
-                          <span className="about-over-element">
+                        <div className={`${Number(windowHeight) > 426 ? 'dual-ring': 'mobile-dual-ring' }`}>
+                          <span className={`${Number(windowHeight) > 426 ? 'about-over-element': 'about-mobile-over-element' }`}>
                             <svg width="200" height="200" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" className="border-radius-px-140">
                               <defs>
                                 <linearGradient id="jaGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -213,6 +217,28 @@ export default function About() {
           animation: dual-ring 1.2s linear infinite;
         }
         @keyframes dual-ring {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+        .mobile-dual-ring {
+          display: inline-block;
+          width: 300px;
+          height: 300px;
+          margin: 20% 20%;
+        }
+        .mobile-dual-ring:after {
+          content: " ";
+          display: block;
+          width: 282px;
+          height: 282px;
+          margin: 20% 20%;
+          margin: 1px;
+          border-radius: 50%;
+          border: 5px solid #3498db;
+          border-color: #3498db transparent #3498db transparent;
+          animation: mobile-dual-ring 1.2s linear infinite;
+        }
+        @keyframes mobile-dual-ring {
           0% { transform: rotate(0deg); }
           100% { transform: rotate(360deg); }
         }

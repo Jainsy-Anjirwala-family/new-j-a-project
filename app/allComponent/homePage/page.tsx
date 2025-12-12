@@ -3,10 +3,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
 export default function HomePage() {
+  const [windowHeight, setWindowHeight] = useState(window.innerWidth.toString());
+  
+  useEffect(() => {
+    console.log('windowHeight',windowHeight);
+  }, []);
   const bioObj = {
     WorkExpList: [
       { 
@@ -77,10 +82,10 @@ export default function HomePage() {
         <h1 className="text-center">Welcome Jainsy Anjirwala</h1>
       </div>
       <hr />
-      <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12 display-flex">
-        <div className="w-per-49 fade-left animation-delay-fade-left-5s">
+      <div className={`${Number(windowHeight) > 426 ? 'display-flex': '' } col-md-12 col-sm-12 col-xs-12 col-lg-12`}>
+        <div className={`${Number(windowHeight) > 426 ? 'w-per-49': 'w-per-100' } fade-left animation-delay-fade-left-5s`}>
           <div className="w-per-100">
-            <div className="w-per-30 ">
+            <div className={`${Number(windowHeight) > 426 ? 'w-per-30': 'w-per-100' }`}>
               <label className="marg-per-l-15"><b>Work Experience:</b></label>
               <div className="w-per-100 ht-per-5 marg-per-l-10">--------------------------------</div>
             </div>
@@ -99,7 +104,7 @@ export default function HomePage() {
             )) }
           </div>
           <div className="w-per-100">
-            <div className="w-per-30">
+            <div className={`${Number(windowHeight) > 426 ? 'w-per-30': 'w-per-100' }`}>
               <label className="marg-per-l-15"><b>Educations:</b></label>
               <div className="w-per-100 ht-per-5 marg-per-l-10">--------------------------------</div>
             </div>
@@ -114,12 +119,16 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <div className="w-per-2">
-          <div className="mrg-h-lr-per-50 w-per-3 bg-color-grey ht-per-100"></div>
-        </div>
-        <div className="w-per-49 fade-right animation-delay-fade-right-5s">
+        { Number(windowHeight) > 426 ? 
+          (        
+            <div className="w-per-2">
+              <div className="mrg-h-lr-per-50 w-per-3 bg-color-grey ht-per-100"></div>
+            </div>
+          ): null 
+        }
+        <div className={`${Number(windowHeight) > 426 ? 'w-per-49': 'w-per-100' } fade-right animation-delay-fade-right-5s`}>
           <div className="w-per-100">
-              <div className="w-per-30">
+              <div className={`${Number(windowHeight) > 426 ? 'w-per-30': 'w-per-100' }`}>
                 <label className="marg-per-l-15"><b>Projects:</b></label>
                 <div className="w-per-100 ht-per-5 marg-per-l-10">--------------------------------</div>
               </div>
@@ -140,7 +149,7 @@ export default function HomePage() {
               </div>
           </div>
           <div className="w-per-100 ">
-              <div className="w-per-30">
+              <div className={`${Number(windowHeight) > 426 ? 'w-per-30': 'w-per-100' }`}>
                 <label className="marg-per-l-15"><b>Skills:</b></label>
                 <div className="w-per-100 ht-per-5 marg-per-l-10">--------------------------------</div>
               </div>

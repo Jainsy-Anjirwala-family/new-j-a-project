@@ -55,3 +55,15 @@
 .float-right-element {
   float: right;
 }
+
+.about-mobile-over-element {
+    position: absolute;
+    top: 115%;
+    left: 30%;
+}
+
+.mobile-over-element {
+    position: absolute;
+    top: 35%;
+    left: 25%;
+}
