@@ -115,7 +115,7 @@ export default function About() {
         src="/Jainsy-Anjirwala-cv.jpg" className="ht-vh-80 border-all-px-2 cursor-style-none" 
         onDragStart={(e) => e.preventDefault()} onContextMenu={(e) => e.preventDefault()}  style={{ userSelect: "none" }} />
       </div>
-      <div className={`${Number(windowHeight) < 990 ? 'marg-per-l-4 marg-per-r-4 col-md-12 col-lg-12 col-xxl-12 col-xl-12' : ' col-md-6 col-lg-6 col-xxl-6 col-xl-6' } col-xs-12 col-sm-12  ht-pc-40 border-all-px-2 border-radius-px-10 border-color-grey`}>
+      <div className={`${Number(windowHeight) < 990 ? 'marg-per-l-4 marg-per-t-2 marg-per-r-4 col-md-12 col-lg-12 col-xxl-12 col-xl-12' : ' col-md-6 col-lg-6 col-xxl-6 col-xl-6' } col-xs-12 col-sm-12  ht-pc-40 `}>
               {
                 technologyNews.length > 0 ? (
                   <Swiper slidesPerView={1} spaceBetween={10}  autoplay={{delay: 2500,disableOnInteraction: false,}}
