@@ -106,7 +106,7 @@ export default function About() {
     }
 
   return (
-    <div className={`${Number(windowHeight) > 426 ? 'display-flex': '' } marg-per-t-4 col-md-12 col-xs-12 col-sm-12 col-lg-12 col-xxl-12 col-xl-12`} >
+    <div className={`${Number(windowHeight) > 990 ? 'display-flex': '' } marg-per-t-4 col-md-12 col-xs-12 col-sm-12 col-lg-12 col-xxl-12 col-xl-12`} >
       <div className="col-md-5 col-xs-12 col-sm-12 col-lg-5 col-xxl-5 col-xl-5 marg-per-l-4">
         <button type="button" className="fr" onClick={handleChange}>
            <FontAwesomeIcon icon={faDownload} />
@@ -160,8 +160,8 @@ export default function About() {
                   ):(
                    loaderObj && loaderObj?.loading ? (
                       <div className="col-md-12 col-xs-12 col-sm-12 col-lg-12 col-xxl-12 col-xl-12">
-                        <div className={`${Number(windowHeight) > 426 ? 'dual-ring': 'mobile-dual-ring' }`}>
-                          <span className={`${Number(windowHeight) > 426 ? 'about-over-element': 'about-mobile-over-element' }`}>
+                        <div className={`${Number(windowHeight) > 990 ? 'dual-ring': 'mobile-dual-ring' }`}>
+                          <span className={`${Number(windowHeight) > 990 ? 'about-over-element': 'about-mobile-over-element' }`}>
                             <svg width="200" height="200" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" className="border-radius-px-140">
                               <defs>
                                 <linearGradient id="jaGradient" x1="0%" y1="0%" x2="100%" y2="0%">

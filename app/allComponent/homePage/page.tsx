@@ -79,14 +79,13 @@ export default function HomePage() {
   return (
     <div className="marg-per-b-4">
       <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12 zoom-in animation-delay-zoom-in-1s">
-        <h1 className="text-center">Welcome Jainsy Anjirwala</h1><br></br>
-        <h2>{windowHeight}</h2>
+        <h1 className="text-center">Welcome Jainsy Anjirwala</h1>
       </div>
       <hr />
-      <div className={`${Number(windowHeight) > 426 ? 'display-flex': '' } col-md-12 col-sm-12 col-xs-12 col-lg-12`}>
-        <div className={`${Number(windowHeight) > 426 ? 'w-per-49': 'w-per-100' } fade-left animation-delay-fade-left-5s`}>
+      <div className={`${Number(windowHeight) > 990 ? 'display-flex': '' } col-md-12 col-sm-12 col-xs-12 col-lg-12`}>
+        <div className={`${Number(windowHeight) > 990 ? 'w-per-49': 'w-per-100' } fade-left animation-delay-fade-left-5s`}>
           <div className="w-per-100">
-            <div className={`${Number(windowHeight) > 426 ? 'w-per-30': 'w-per-100' }`}>
+            <div className={`${Number(windowHeight) > 990 ? 'w-per-30': 'w-per-100' }`}>
               <label className="marg-per-l-15"><b>Work Experience:</b></label>
               <div className="w-per-100 ht-per-5 marg-per-l-10">--------------------------------</div>
             </div>
@@ -105,7 +104,7 @@ export default function HomePage() {
             )) }
           </div>
           <div className="w-per-100">
-            <div className={`${Number(windowHeight) > 426 ? 'w-per-30': 'w-per-100' }`}>
+            <div className={`${Number(windowHeight) > 990 ? 'w-per-30': 'w-per-100' }`}>
               <label className="marg-per-l-15"><b>Educations:</b></label>
               <div className="w-per-100 ht-per-5 marg-per-l-10">--------------------------------</div>
             </div>
@@ -120,16 +119,16 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        { Number(windowHeight) > 426 ? 
+        { Number(windowHeight) > 990 ? 
           (        
             <div className="w-per-2">
               <div className="mrg-h-lr-per-50 w-per-3 bg-color-grey ht-per-100"></div>
             </div>
           ): null 
         }
-        <div className={`${Number(windowHeight) > 426 ? 'w-per-49': 'w-per-100' } fade-right animation-delay-fade-right-5s`}>
+        <div className={`${Number(windowHeight) > 990 ? 'w-per-49': 'w-per-100' } fade-right animation-delay-fade-right-5s`}>
           <div className="w-per-100">
-              <div className={`${Number(windowHeight) > 426 ? 'w-per-30': 'w-per-100' }`}>
+              <div className={`${Number(windowHeight) > 990 ? 'w-per-30': 'w-per-100' }`}>
                 <label className="marg-per-l-15"><b>Projects:</b></label>
                 <div className="w-per-100 ht-per-5 marg-per-l-10">--------------------------------</div>
               </div>
@@ -150,7 +149,7 @@ export default function HomePage() {
               </div>
           </div>
           <div className="w-per-100 ">
-              <div className={`${Number(windowHeight) > 426 ? 'w-per-30': 'w-per-100' }`}>
+              <div className={`${Number(windowHeight) > 990 ? 'w-per-30': 'w-per-100' }`}>
                 <label className="marg-per-l-15"><b>Skills:</b></label>
                 <div className="w-per-100 ht-per-5 marg-per-l-10">--------------------------------</div>
               </div>
