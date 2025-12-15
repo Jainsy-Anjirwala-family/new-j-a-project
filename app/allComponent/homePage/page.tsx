@@ -79,9 +79,8 @@ export default function HomePage() {
   return (
     <div className="marg-per-b-4">
       <div className="col-md-12 col-sm-12 col-xs-12 col-lg-12 zoom-in animation-delay-zoom-in-1s">
-        <h1 className="text-center">Welcome Jainsy Anjirwala</h1><br>
+        <h1 className="text-center">Welcome Jainsy Anjirwala</h1><br></br>
         <h2>{windowHeight}</h2>
-        </br>
       </div>
       <hr />
       <div className={`${Number(windowHeight) > 426 ? 'display-flex': '' } col-md-12 col-sm-12 col-xs-12 col-lg-12`}>
