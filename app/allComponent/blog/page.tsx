@@ -66,14 +66,14 @@ export default function Blog() {
         <div className="col-md-12 col-xs-12 col-sm-12 col-lg-12 col-xxl-12 col-xl-12">
           <div className={`${Number(windowHeight) > 990 ? 'dual-ring': 'mobile-dual-ring' }`}>
             <span className={`${Number(windowHeight) > 990 ? 'over-element': 'mobile-over-element' }`}>
-              <svg width="200" height="200" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" className="border-radius-px-140">
+              {/* <svg width="200" height="200" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" className="border-radius-px-140">
                 <defs>
                   <linearGradient id="jaGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="#7fe9e5ff" />   {/* Red */}
-                    <stop offset="25%" stopColor="#91b7e7ff" />  {/* Orange */}
-                    <stop offset="50%" stopColor="#9d7bddff" />  {/* Yellow */}
-                    <stop offset="75%" stopColor="#de7ac5ff" />  {/* Green */}
-                    <stop offset="100%" stopColor="#88c1dfff" /> {/* Blue */}
+                    <stop offset="0%" stopColor="#7fe9e5ff" /> 
+                    <stop offset="25%" stopColor="#91b7e7ff" />
+                    <stop offset="50%" stopColor="#9d7bddff" />
+                    <stop offset="75%" stopColor="#de7ac5ff" /> 
+                    <stop offset="100%" stopColor="#88c1dfff" />
                   </linearGradient>
                 </defs>
                 <rect width="300" height="300" rx="40" fill="url(#jaGradient)"  />
@@ -89,7 +89,7 @@ export default function Blog() {
                 >
                   JA
                 </text>
-              </svg>
+              </svg> */}
             </span>
           </div>
         </div>
