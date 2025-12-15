@@ -135,8 +135,8 @@ export default function About() {
                                 <YouTube
                                   videoId={article.youTubeIds}
                                   opts={{
-                                    height: `${Number(windowHeight) < 990 ? String((window.innerHeight / 3)) : String((window.innerHeight / 2))}`,
-                                    width:  `${Number(windowHeight) < 990 ? String((window.innerWidth / 1.5)) : String((window.innerWidth / 2.0))}`,
+                                    height: `${Number(windowHeight) < 990 ? String((window.innerHeight / 3.5)) : String((window.innerHeight / 2))}`,
+                                    width:  `${Number(windowHeight) < 990 ? String((window.innerWidth / 0.5)) : String((window.innerWidth / 2.0))}`,
                                     playerVars: { autoplay: 0 },
                                   }}
                                 />
