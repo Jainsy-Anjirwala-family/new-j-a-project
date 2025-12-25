@@ -95,7 +95,7 @@ async function handleSubmit(e:any) {
 const [sending, setSending] = useState(false);
 
   return (
-    <div className="bg-color-multicolor padd-per-t-10 padd-per-b-9 ht-pc-45">
+    <div className="bg-img-portfolio padd-per-t-10 padd-per-b-9 ht-pc-45">
       <div className="container padd-per-r-10 padd-per-l-10 border-all-px-3 border-color-grey border-radius-px-15 bg-img-style font-color-val-white"> 
         <div className="padd-per-l-5 padd-per-r-5 padd-per-t-3 padd-per-b-3 fade-in animation-delay-fade-in-5s">
           <h1>Contact Me</h1>
