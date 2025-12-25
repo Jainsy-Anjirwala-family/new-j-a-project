@@ -58,7 +58,7 @@ export default function Blog() {
 
   return (
     <div>
-      <div className="col-md-12 col-xs-12 col-sm-12 col-lg-12 col-xxl-12 col-xl-12 display-flex">
+      <div className="col-md-12 col-xs-12 col-sm-12 col-lg-12 col-xxl-12 col-xl-12 display-flex bg-img-portfolio">
       <h1>Latest Trading News</h1>
       <button type="button" className="btn btn-info marg-per-l-60" onClick={() => youtubeNewsList({'name': btnName}) } >{btnName}</button>
       </div>

@@ -3,3 +3,8 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.bg-img-portfolio{
+    background-image: url('../../public/female-portfolio-img.png');
+    background-repeat: no-repeat;
+}

@@ -106,7 +106,7 @@ export default function About() {
     }
 
   return (
-    <div className={`${Number(windowHeight) < 990 ? '': 'display-flex' } marg-per-t-4 col-md-12 col-xs-12 col-sm-12 col-lg-12 col-xxl-12 col-xl-12`} >
+    <div className={`${Number(windowHeight) < 990 ? '': 'display-flex' } bg-img-portfolio marg-per-t-4 col-md-12 col-xs-12 col-sm-12 col-lg-12 col-xxl-12 col-xl-12`} >
       <div className={`${Number(windowHeight) < 990 ? 'col-md-12  col-lg-12 col-xxl-12 col-xl-12' : 'col-md-5  col-lg-5 col-xxl-5 col-xl-5'} col-xs-12 col-sm-12 marg-per-l-4`}>
         <button type="button" className="fr" onClick={handleChange}>
            <FontAwesomeIcon icon={faDownload} />
@@ -115,7 +115,7 @@ export default function About() {
         src="/Jainsy-Anjirwala-cv.jpg" className="ht-vh-80 border-all-px-2 cursor-style-none" 
         onDragStart={(e) => e.preventDefault()} onContextMenu={(e) => e.preventDefault()}  style={{ userSelect: "none" }} />
       </div>
-      <div className={`${Number(windowHeight) < 990 ? 'marg-per-l-4 marg-per-t-2 marg-per-r-4 col-md-12 col-lg-12 col-xxl-12 col-xl-12' : ' col-md-6 col-lg-6 col-xxl-6 col-xl-6' } col-xs-12 col-sm-12  ht-pc-40 `}>
+      <div className={`${Number(windowHeight) < 990 ? 'marg-per-l-4 marg-per-t-2 marg-per-r-4 col-md-12 col-lg-12 col-xxl-12 col-xl-12' : ' col-md-6 col-lg-6 col-xxl-6 col-xl-6' } ${technologyNews?.length > 0 ? 'bg-color-white': ''}  col-xs-12 col-sm-12  ht-pc-40 `}>
               {
                 technologyNews.length > 0 ? (
                   <Swiper slidesPerView={1} spaceBetween={10}  autoplay={{delay: 2500,disableOnInteraction: false,}}
