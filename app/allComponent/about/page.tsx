@@ -86,7 +86,7 @@ export default function About() {
           };
 
           const result = await emailjs.send(serviceId, templateId, templateParams, publicKey);
-          const res = await fetch("./public/Jainsy-Anjirwala-cv.pdf");
+          const res = await fetch("/Jainsy-Anjirwala-cv.pdf");
           const blob = await res.blob();
           const url = window.URL.createObjectURL(new Blob([blob]));
           const link = document.createElement("a");
