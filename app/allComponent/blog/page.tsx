@@ -1,170 +1,201 @@
 "use client";
 import { useEffect, useState } from "react";
-import Router from "next/router";
-import NProgress from "nprogress";
-import "nprogress/nprogress.css";
 import { getTradingNews, fetchYoutubeVideos } from "../../serviceList/newsService";
-import toast from "react-hot-toast";
+import { motion, AnimatePresence } from "framer-motion";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExternalLinkAlt, faClock, faNewspaper, faBolt, faPlay } from '@fortawesome/free-solid-svg-icons';
 
 export default function Blog() {
-  const [windowHeight, setWindowHeight] = useState(window.innerWidth.toString());
   const [news, setNews] = useState([]);
-  let setBtnNameList = [
-    {'label': 'trading New', 'value':  'trading+news'},
-    {'label': 'trending New', 'value':  'trending+news'},
-  ];
-  const [btnName, setBtnName] = useState("trading New");
   const [loading, setLoading] = useState(true);
+  const [activeTab, setActiveTab] = useState("trading New");
+
+  const newsCategories = [
+    { label: 'Trading', value: 'trading New', q: 'trading+news' },
+    { label: 'Trending', value: 'trending New', q: 'trending+news' },
+  ];
 
   useEffect(() => {
-    // Global route loader
-    const start = () => NProgress.start();
-    const done = () => NProgress.done();
-
-    Router.events.on("routeChangeStart", start);
-    Router.events.on("routeChangeComplete", done);
-    Router.events.on("routeChangeError", done);
-
-    // Page data loader
     setLoading(true);
-    getTradingNews().then((data: any) =>{ data?.length > 0 ? setNews(data): youtubeNewsList({'name': btnName});  data?.length > 0 ? setLoading(false):setLoading(true);  });
-
-    return () => {
-      Router.events.off("routeChangeStart", start);
-      Router.events.off("routeChangeComplete", done);
-      Router.events.off("routeChangeError", done);
-    };
+    getTradingNews().then((data: any) => {
+      if (data?.length > 0) {
+        setNews(data);
+        setLoading(false);
+      } else {
+        fetchNewsByCategory(activeTab);
+      }
+    });
   }, []);
 
-    function youtubeNewsList(event:any){
-        const findName =  setBtnNameList.find((item:any)=> item?.label === event?.name);
-        const differenceName = setBtnNameList.find((item:any)=>  item?.label !== event?.name);
-        if(findName){
-          differenceName ? setBtnName(differenceName.label): null;
-          fetchYoutubeVideos({'query': findName?.value}).then((item:any)=>{
-            const youtubeList =  item.map((item:any)=>{ 
-            item['youTubeIds'] = item?.id?.videoId; item['title'] = item?.snippet?.title;
-            item['urlToImage'] = item?.snippet?.thumbnails?.high?.url;
-            item['source'] = {
-              'name': item?.snippet?.channelTitle
-            }
-            item?.id?.videoId ? item['url'] = `https://www.youtube.com/watch?v=${item?.id?.videoId}` : null;
-              return item;});
-            setLoading(false);
-            setNews(youtubeList);
-          })
-        }
-      }
+  const fetchNewsByCategory = (categoryValue: string) => {
+    setLoading(true);
+    const category = newsCategories.find(c => c.value === categoryValue);
+    if (!category) return;
+
+    fetchYoutubeVideos({ query: category.q }).then((item: any) => {
+      const youtubeList = item.map((video: any) => ({
+        ...video,
+        id: video.id?.videoId,
+        title: video.snippet?.title,
+        urlToImage: video.snippet?.thumbnails?.high?.url,
+        source: { name: video.snippet?.channelTitle },
+        url: `https://www.youtube.com/watch?v=${video.id?.videoId}`,
+        publishedAt: video.snippet?.publishedAt,
+        isYoutube: true
+      }));
+      setNews(youtubeList);
+      setLoading(false);
+    });
+  };
+
+  const handleTabChange = (category: any) => {
+    setActiveTab(category.value);
+    fetchNewsByCategory(category.value);
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1 }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  };
 
   return (
-    <div>
-      <div className="col-md-12 col-xs-12 col-sm-12 col-lg-12 col-xxl-12 col-xl-12 display-flex bg-img-portfolio">
-      <h1>Latest Trading News</h1>
-      <button type="button" className="btn btn-info marg-per-l-60" onClick={() => youtubeNewsList({'name': btnName}) } >{btnName}</button>
-      </div>
-      {loading ? (
-        <div className="col-md-12 col-xs-12 col-sm-12 col-lg-12 col-xxl-12 col-xl-12">
-          <div className={`${Number(windowHeight) > 990 ? 'dual-ring': 'mobile-dual-ring' }`}>
-            <span className={`${Number(windowHeight) > 990 ? 'over-element': 'mobile-over-element' }`}>
-              {/* <svg width="200" height="200" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" className="border-radius-px-140">
-                <defs>
-                  <linearGradient id="jaGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="#7fe9e5ff" /> 
-                    <stop offset="25%" stopColor="#91b7e7ff" />
-                    <stop offset="50%" stopColor="#9d7bddff" />
-                    <stop offset="75%" stopColor="#de7ac5ff" /> 
-                    <stop offset="100%" stopColor="#88c1dfff" />
-                  </linearGradient>
-                </defs>
-                <rect width="300" height="300" rx="40" fill="url(#jaGradient)"  />
-                <text
-                  x="50%"
-                  y="55%"
-                  dominantBaseline="middle"
-                  textAnchor="middle"
-                  fontSize="150"
-                  fill="white"
-                  fontFamily="Arial"
-                  fontWeight="bold"
-                >
-                  JA
-                </text>
-              </svg> */}
-            </span>
-          </div>
+    <div className="min-h-screen bg-[#0a0a0a] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/20 via-[#0a0a0a] to-[#0a0a0a] text-white pt-24 pb-12 px-4 md:px-8">
+      {/* Header Section */}
+      <div className="max-w-7xl mx-auto mb-12">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+          >
+            <h1 className="text-4xl md:text-5xl font-black bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400 mb-2">
+              Market Intelligence
+            </h1>
+            <p className="text-neutral-400 text-lg">
+              Stay ahead with real-time news and expert analysis.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="flex bg-white/5 backdrop-blur-md p-1 rounded-2xl border border-white/10 self-start md:self-auto"
+          >
+            {newsCategories.map((category) => (
+              <button
+                key={category.value}
+                onClick={() => handleTabChange(category)}
+                className={`px-6 py-2.5 rounded-xl text-sm font-bold transition-all duration-300 flex items-center gap-2 ${activeTab === category.value
+                    ? "bg-blue-600 text-white shadow-lg shadow-blue-500/20"
+                    : "text-neutral-400 hover:text-white hover:bg-white/5"
+                  }`}
+              >
+                <FontAwesomeIcon icon={category.label === 'Trading' ? faBolt : faNewspaper} className="w-3 h-3" />
+                {category.label}
+              </button>
+            ))}
+          </motion.div>
         </div>
-      ) : news?.length > 0 ? (
-        <div className="display-grid-sq">
-          {news.map((item: any, index: number) => (
-            <div key={index} className="">
-                <a href={item.url} target="_blank" rel="noopener noreferrer">
-                  <img
-                    src={item?.urlToImage ? item.urlToImage : item?.image ? item.image : '/default-news-image.jpg'}
-                    style={{ width: "100%", height: 300, borderRadius: 10 }}
-                  />
-                </a>
-                    <h5>{item.title}</h5>
-                <div className="display-flex">
-                    <p>{item?.source?.name} - {item?.publishedAt ? new Date(item.publishedAt).toLocaleString() : ''}</p>
-                      <a href={item.url} target="_blank" className="marg-per-l-40" rel="noopener noreferrer">
-                        Read More
-                      </a>
-                </div>
-            </div>
+      </div>
+
+      {loading ? (
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {[...Array(6)].map((_, i) => (
+            <div key={i} className="h-[450px] rounded-[2rem] bg-white/5 animate-pulse border border-white/5" />
           ))}
         </div>
-      ): !loading && news?.length == 0 ? (
-        <h1>No news available.</h1>
-      ) : null}
+      ) : (
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          <AnimatePresence mode="popLayout">
+            {news.map((item: any) => (
+              <motion.div
+                key={item.id || item.url}
+                variants={cardVariants}
+                layout
+                whileHover={{ y: -8 }}
+                className="group relative backdrop-blur-xl bg-white/5 border border-white/10 rounded-[2rem] overflow-hidden flex flex-col transition-all hover:bg-white/10 hover:border-blue-500/30 shadow-2xl"
+              >
+                {/* Image Container */}
+                <div className="relative h-56 overflow-hidden">
+                  <img
+                    src={item.urlToImage || '/default-news-image.jpg'}
+                    alt={item.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent opacity-60" />
 
-      {/* Skeleton styles */}
-      <style jsx>{`
-        .dual-ring {
-          display: inline-block;
-          width: 300px;
-          height: 300px;
-          margin: 10% 38%;
-        }
-        .dual-ring:after {
-          content: " ";
-          display: block;
-          width: 282px;
-          height: 282px;
-          margin: 10% 38%;
-          margin: 1px;
-          border-radius: 50%;
-          border: 5px solid #3498db;
-          border-color: #3498db transparent #3498db transparent;
-          animation: dual-ring 1.2s linear infinite;
-        }
-        @keyframes dual-ring {
-          0% { transform: rotate(0deg); }
-          100% { transform: rotate(360deg); }
-        }
-        .mobile-dual-ring {
-          display: inline-block;
-          width: 300px;
-          height: 300px;
-          margin: 9% 15%;
-        }
-        .mobile-dual-ring:after {
-          content: " ";
-          display: block;
-          width: 282px;
-          height: 282px;
-          margin: 9% 15%;
-          margin: 1px;
-          border-radius: 50%;
-          border: 5px solid #3498db;
-          border-color: #3498db transparent #3498db transparent;
-          animation: mobile-dual-ring 1.2s linear infinite;
-        }
-        @keyframes mobile-dual-ring {
-          0% { transform: rotate(0deg); }
-          100% { transform: rotate(360deg); }
-        }
-      `}</style>
+                  {item.isYoutube && (
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center shadow-xl animate-pulse">
+                        <FontAwesomeIcon icon={faPlay} className="text-white ml-1" />
+                      </div>
+                    </div>
+                  )}
+                </div>
 
+                {/* Content */}
+                <div className="p-6 flex flex-col flex-grow">
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="px-3 py-1 bg-blue-500/10 text-blue-400 text-[10px] font-bold uppercase tracking-wider rounded-lg border border-blue-500/20">
+                      {item.source?.name || "News Source"}
+                    </span>
+                    <span className="flex items-center gap-1.5 text-neutral-500 text-[11px]">
+                      <FontAwesomeIcon icon={faClock} className="w-2.5 h-2.5" />
+                      {item.publishedAt ? new Date(item.publishedAt).toLocaleDateString() : 'Recent'}
+                    </span>
+                  </div>
+
+                  <h3 className="text-lg font-bold leading-tight mb-4 group-hover:text-blue-400 transition-colors line-clamp-2">
+                    {item.title}
+                  </h3>
+
+                  <div className="mt-auto pt-6 border-t border-white/5 flex items-center justify-between">
+                    <a
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm font-bold text-white hover:text-blue-400 transition-colors flex items-center gap-2 group/btn"
+                    >
+                      Read Full Article
+                      <FontAwesomeIcon
+                        icon={faExternalLinkAlt}
+                        className="w-3 h-3 translate-y-0 group-hover/btn:-translate-y-0.5 group-hover/btn:translate-x-0.5 transition-transform"
+                      />
+                    </a>
+                  </div>
+                </div>
+
+                {/* Subtle Hover Glow */}
+                <div className="absolute -inset-px bg-gradient-to-br from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none rounded-[2rem]" />
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
+      )}
+
+      {!loading && news?.length === 0 && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="text-center py-24"
+        >
+          <div className="text-6xl mb-6">🔍</div>
+          <h2 className="text-2xl font-bold text-white mb-2">No updates found</h2>
+          <p className="text-neutral-500">Check back later for high-frequency market updates.</p>
+        </motion.div>
+      )}
     </div>
   );
 }
