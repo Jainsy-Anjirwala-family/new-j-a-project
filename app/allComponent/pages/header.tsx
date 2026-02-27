@@ -95,9 +95,6 @@ export default function Header() {
                   JA
                 </div>
               </motion.div>
-              <span className="hidden md:block font-bold text-lg bg-clip-text text-transparent bg-gradient-to-r from-white to-neutral-500">
-                Antigravity
-              </span>
             </Link>
 
             {/* Navigation Pills */}
